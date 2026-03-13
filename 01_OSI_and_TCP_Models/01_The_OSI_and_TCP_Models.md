@@ -44,13 +44,3 @@ When determining what layer a device operates on, look at the highest layer of d
 
 * **Layer 4 (Transport Protocols):** `TCP`, `UDP`.
 * **Layer 7 (Application Protocols):** `HTTP/HTTPS`, `FTP`, `SMTP/POP3/IMAP`, `DNS`.
-
-## Hardware & Protocol Mapping (Exam Prep)
-When determining what layer a device operates on, look at the highest layer of data it is engineered to understand.
-
-* **Layer 1 (Physical):** `Cables`, `Hubs`, `Repeaters`. (Transmits raw electrical/radio signals; no address understanding).
-* **Layer 2 (Data Link):** `Switches`, `Bridges`, `Network Interface Cards (NICs)`. (Reads MAC addresses to route within a LAN).
-* **Layer 3 (Network):** `Routers`, `Multilayer Switches`. (Reads IP addresses to route across the WAN/Internet).
-
-* **Layer 4 (Transport Protocols):** `TCP`, `UDP`.
-* **Layer 7 (Application Protocols):** `HTTP/HTTPS`, `FTP`, `SMTP/POP3/IMAP`, `DNS`.
