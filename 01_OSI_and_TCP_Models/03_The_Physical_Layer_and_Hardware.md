@@ -46,3 +46,19 @@
 * **Cable Jackets (Plenum vs. Non-Plenum):**
   * *Non-Plenum (PVC):* Made of standard Polyvinyl Chloride. Releases toxic fumes and heavy smoke if burned. Never put in shared airspaces.
   * *Plenum-Rated (FEP):* Made of Fluorinated Ethylene Polymer or low-smoke PVC. Fire-retardant. Mandatory for drop-ceilings and shared HVAC airspaces. Less physically flexible than standard PVC.
+
+## 5. Optical Fiber Standards (Objective 1.5 - Transcript Verified)
+Uses light instead of electrical RF signals. Completely immune to Radio Frequency Interference (RFI/EMI) and highly secure (wiretapping physically breaks the light connection and instantly triggers alerts).
+* **Fiber Cable Construction:**
+  * *Core:* The highly reflective center layer where the light actually travels.
+  * *Cladding:* A low-reflective layer surrounding the core that keeps the light bouncing inward.
+  * *Buffer Coating:* The outer protective plastic coating.
+  * *Ferrule:* The rigid physical cylinder at the very tip of the connector that protects and aligns the delicate fiber core.
+* **Multimode Fiber (MMF):**
+  * *Distance:* Short-range communication (Up to ~2 kilometers).
+  * *Light Source:* Inexpensive LEDs.
+  * *Core Size:* Relatively large core. The light bounces off the cladding in multiple different paths or "modes".
+* **Single-mode Fiber (SMF):**
+  * *Distance:* Extreme long-distance communication (Up to 100 kilometers without needing a signal repeater).
+  * *Light Source:* Expensive Lasers or highly intense LEDs.
+  * *Core Size:* Very small core. The light travels in a single, direct path (mode) straight down the center.
