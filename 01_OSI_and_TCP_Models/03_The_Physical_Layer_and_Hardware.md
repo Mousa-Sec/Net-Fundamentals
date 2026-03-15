@@ -35,7 +35,7 @@
 * **Fiber Connectors:** LC (clips), ST (bayonet twist), SC (square push-pull).
 * **Transceivers:** SFP (1 Gbps), SFP+ (10 Gbps), QSFP (40 Gbps).
 
-## 4. Copper Cabling Standards (Objective 1.5 - Transcript Verified)
+## 4. Copper Cabling Standards (Objective 1.5)
 * **Twisted Pair Mechanics:** Wires are paired and twisted at different rates to cancel out Electromagnetic Interference (EMI). The 802.3 Ethernet standard dictates the minimum category required (e.g., 1000BASE-T requires at least Cat 5).
   * *Categories:* Cat 5e (1 Gbps / 100m), Cat 6 (10 Gbps / 55m), Cat 6a (10 Gbps / 100m).
 * **Coaxial Cable:** A single copper conductor surrounded by an insulator, shielding, and a jacket that all share a common axis.
@@ -47,7 +47,7 @@
   * *Non-Plenum (PVC):* Made of standard Polyvinyl Chloride. Releases toxic fumes and heavy smoke if burned. Never put in shared airspaces.
   * *Plenum-Rated (FEP):* Made of Fluorinated Ethylene Polymer or low-smoke PVC. Fire-retardant. Mandatory for drop-ceilings and shared HVAC airspaces. Less physically flexible than standard PVC.
 
-## 5. Optical Fiber Standards (Objective 1.5 - Transcript Verified)
+## 5. Optical Fiber Standards (Objective 1.5)
 Uses light instead of electrical RF signals. Completely immune to Radio Frequency Interference (RFI/EMI) and highly secure (wiretapping physically breaks the light connection and instantly triggers alerts).
 * **Fiber Cable Construction:**
   * *Core:* The highly reflective center layer where the light actually travels.
