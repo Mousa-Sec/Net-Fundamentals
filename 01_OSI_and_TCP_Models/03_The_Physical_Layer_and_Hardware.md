@@ -62,3 +62,9 @@ Uses light instead of electrical RF signals. Completely immune to Radio Frequenc
   * *Distance:* Extreme long-distance communication (Up to 100 kilometers without needing a signal repeater).
   * *Light Source:* Expensive Lasers or highly intense LEDs.
   * *Core Size:* Very small core. The light travels in a single, direct path (mode) straight down the center.
+
+## 6. Copper Connectors (Objective 1.5 - Transcript Verified)
+* **RJ11 (Registered Jack 11):** 6-position, 2-conductor (6P2C). Used primarily for analog telephones and DSL connections.
+* **RJ45 (Registered Jack 45):** 8-position, 8-conductor (8P8C). The standard connector for Ethernet LAN connections.
+* **F-Connector:** A threaded, screw-on connector used with coaxial cable. Extremely common for bringing Cable Modem (DOCSIS) ISP connections into a building.
+* **BNC Connector (Bayonet Neill-Concelman):** A push-and-twist bayonet connector used with coaxial cable. Used frequently in WANs or legacy networks because it locks securely into place and cannot be easily pulled out by accident.
