@@ -79,41 +79,6 @@ Uses light instead of electrical RF signals. Completely immune to Radio Frequenc
   * Contains a single, central conductor surrounded by thick insulation and braided shielding.
   * The heavy shielding provides massive protection against **external interference (EMI)**.
   * *Primary Use:* Broadband Internet access (DOCSIS) and Cable Television.
-<<<<<<< HEAD
-
-## 7. Advanced Cabling Specs & Exam Tricks (ExamCompass Patch)
-* **The 100-Meter Rule:** The standard maximum distance for almost all twisted-pair Ethernet cables (Cat 5, Cat 5e, Cat 6a) before signal degradation (attenuation) is **100 meters**.
-  * *The Exception:* Cat 6 can run 10 Gbps, but its maximum distance strictly drops to **55 meters**.
-* **Category 7 (Cat 7):** Supports 10 Gbps up to 100 meters. Strictly shielded.
-* **Category 8 (Cat 8):** Designed specifically for Data Center equipment. Supports extreme speeds of 25 Gbps (25GBASE-T) and 40 Gbps (40GBASE-T), but strictly limited to short distances of **30 meters**.
-* **Coaxial Cable Anatomy & Usage:**
-  * It is a **Copper** cable.
-  * Contains a single, central conductor surrounded by thick insulation and braided shielding.
-  * The heavy shielding provides massive protection against **external interference (EMI)**.
-  * *Primary Use:* Broadband Internet access (DOCSIS) and Cable Television.
-
-## 7. Advanced Cabling Specs & Exam Tricks (ExamCompass Patch)
-* **The 100-Meter Rule:** The standard maximum distance for almost all twisted-pair Ethernet cables (Cat 5, Cat 5e, Cat 6a) before signal degradation (attenuation) is **100 meters**.
-  * *The Exception:* Cat 6 can run 10 Gbps, but its maximum distance strictly drops to **55 meters**.
-* **Category 7 (Cat 7):** Supports 10 Gbps up to 100 meters. Strictly shielded.
-* **Category 8 (Cat 8):** Designed specifically for Data Center equipment. Supports extreme speeds of 25 Gbps (25GBASE-T) and 40 Gbps (40GBASE-T), but strictly limited to short distances of **30 meters**.
-* **Coaxial Cable Anatomy & Usage:**
-  * It is a **Copper** cable.
-  * Contains a single, central conductor surrounded by thick insulation and braided shielding.
-  * The heavy shielding provides massive protection against **external interference (EMI)**.
-  * *Primary Use:* Broadband Internet access (DOCSIS) and Cable Television.
-
-## 8. Advanced Connector Mechanics (ExamCompass Patch)
-* **The Coaxial Connector Mechanisms:**
-  * *F-Type Connector:* **Threaded (screw-on).** Semi-permanent. Used for Cable TV and Broadband Internet Modems.
-  * *BNC Connector:* **Bayonet (twist-and-lock).** Quick connect/disconnect. Used for CCTV, professional audio/video, and legacy networks.
-* **Twisted-Pair Connectors:** * *RJ45 & RJ11:* Used strictly for twisted-pair copper Ethernet and Telephone networks. Never fiber or coax.
-* **The MPO Connector (Multi-fiber Push-On):**
-  * A high-density fiber-optic connector.
-  * Unlike standard LC/SC connectors that hold 1 or 2 fibers, an MPO connector holds multiple fibers (12 to 72) in a single ferrule.
-  * *Use Case:* Extreme high-speed backbone connections inside Data Centers.
-=======
->>>>>>> 059fa38530a8e533904e698fdecfa2e277538e23
 
 ## 8. Advanced Connector Mechanics (ExamCompass Patch)
 * **The Coaxial Connector Mechanisms:**
