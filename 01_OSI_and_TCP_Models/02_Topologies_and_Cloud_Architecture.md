@@ -73,3 +73,15 @@ Modern networks separate the decision-making from the actual data forwarding.
 ## 6. Traffic Flow Classifications (Objective 1.6 - Transcript Verified)
 * **North-South Traffic:** Traffic entering the network from an external source (the Internet) or leaving the network to an external destination. Crosses perimeter security boundaries.
 * **East-West Traffic:** Traffic that stays entirely within the local data center (e.g., a local file server communicating with an internal image server). Requires internal micro-segmentation, as perimeter firewalls do not inspect this lateral traffic.
+
+## 7. Cloud Routing & Architecture (Objective 1.3 - Transcript Verified)
+* **VPC (Virtual Private Cloud):** A logically isolated virtual network within a public cloud environment where you deploy infrastructure (servers, load balancers, etc.).
+* **Transit Gateway:** Acts as a central "cloud router." It connects multiple different VPCs together, allowing instances in separate VPCs to communicate with each other seamlessly.
+* **VPC Endpoint:** Creates a private, direct connection between your VPC and another cloud service (even across different cloud providers) without the traffic ever crossing the public internet.
+* **VPN Connection:** Allows remote physical sites or individual users to establish an encrypted tunnel directly into the private VPC over the internet.
+
+## 8. Cloud Gateways & Firewalls (Objective 1.3 - Transcript Verified)
+* **Internet Gateway (IGW):** A two-way connection. Allows cloud instances in a public subnet to be accessed from anywhere on the public internet (e.g., a public-facing web server).
+* **NAT Gateway:** Translates private internal IPs to public IPs. Allows internal servers to reach out to the internet (for software updates), but explicitly restricts and drops unsolicited inbound connections from the outside.
+* **Network Security List (NSL / NACL):** A broad cloud firewall. Rules applied here affect the **entire Subnet** or Virtual Cloud Network simultaneously. Lacks fine-grained control.
+* **Network Security Group (NSG):** A highly granular cloud firewall. Rules are applied directly to a specific **Virtual NIC (Network Interface Card)** attached to a single virtual machine.
