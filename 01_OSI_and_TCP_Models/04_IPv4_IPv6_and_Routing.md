@@ -8,3 +8,25 @@
 * **Maximum Value:** If an octet is all ones (`11111111`), the mathematical total is exactly **255** (128+64+32+16+8+4+2+1).
 * **Binary to Decimal Logic:** Place the binary under the chart. Add the values where a `1` exists. Ignore values where a `0` exists.
 * **Decimal to Binary Logic:** Start at 128. If the chart value fits into your target number, place a `1` and subtract. If it doesn't fit, place a `0` and move right.
+
+## 2. IPv4 Addressing & RFC 1918 (Objective 1.7 - Transcript Verified)
+* **IPv4 Anatomy:** 32 bits total, divided into 4 octets (8 bits each). Maximum decimal value of a single octet is 255.
+* **Core Components:**
+  * *IP Address:* The unique identifier for the device.
+  * *Subnet Mask:* Determines the boundary between the network portion and the host portion of the IP.
+  * *Default Gateway:* The router IP address on the local subnet used to send traffic outside the local network.
+
+* **Private IP Ranges (RFC 1918):** Non-routable on the public internet. Used exclusively for internal LANs.
+  * `10.0.0.0 /8` (10.0.0.0 - 10.255.255.255)
+  * `172.16.0.0 /12` (172.16.0.0 - 172.31.255.255)
+  * `192.168.0.0 /16` (192.168.0.0 - 192.168.255.255)
+
+* **APIPA / Link-Local Addressing:**
+  * Auto-assigned when a device cannot reach a DHCP server.
+  * *Range:* `169.254.1.0` to `169.254.254.255`.
+  * *Limitation:* Traffic cannot be routed outside the local subnet (no internet access).
+
+* **Specialized IP Addresses:**
+  * *Loopback:* `127.0.0.1` (to 127.255.255.254). Used to test the local host's internal TCP/IP stack.
+  * *Reserved Class E:* `240.0.0.1` to `255.255.255.255`. Set aside for experimental use; never assigned to standard hosts.
+  * *VIP (Virtual IP):* An address not bound to a physical network adapter. Used for High Availability, Load Balancers, or Virtual Machines.
