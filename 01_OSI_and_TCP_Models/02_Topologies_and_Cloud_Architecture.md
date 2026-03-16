@@ -98,3 +98,16 @@ Modern networks separate the decision-making from the actual data forwarding.
   * *Example:* Salesforce platform development.
 * **Infrastructure as a Service (IaaS):** Also known as **Hardware as a Service (HaaS)**. The provider only manages the physical data center and virtual hardware. The customer is responsible for installing the OS, the software, and managing all security.
 * **The Responsibility Rule:** No matter which cloud model is used, the customer is **always** responsible for the security of their own data, their user accounts (Identity/Directory), and their local end-user devices.
+
+## 11. Software-Defined Networking (SDN) (Objective 1.8 - Transcript Verified)
+Separates the traditional networking functions into three distinct, virtualized layers:
+* **Data Plane (Infrastructure Layer):** The physical or virtual forwarding engine. Does the "heavy lifting" (forwarding frames, trunking, encrypting).
+* **Control Plane (Control Layer):** The logic engine. Contains the routing tables, MAC address tables, and NAT tables that dictate *where* the Data Plane should send traffic.
+* **Management Plane (Application Layer):** The administrative interface used to configure the device (e.g., SSH, Console connection, Web GUI).
+
+## 12. SD-WAN Characteristics (Objective 1.8 - Transcript Verified)
+A wide area network built to manage the complexities of decentralized cloud environments.
+* **Application-Aware:** Identifies the specific application being used (e.g., cloud email vs. internal database) and dynamically routes it to the most efficient destination, bypassing central data center bottlenecks.
+* **Transport Agnostic:** Can route traffic securely over any connection type simultaneously (Fiber, DSL, 5G/LTE).
+* **Central Policy Management:** Administrators configure rules on a single "pane of glass" controller, which instantly pushes the updates to all SD-WAN routers globally.
+* **Zero-Touch Provisioning:** Remote devices automatically configure and update themselves upon being plugged in, requiring no local IT intervention.
