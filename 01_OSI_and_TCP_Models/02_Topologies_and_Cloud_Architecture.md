@@ -38,30 +38,6 @@ Modern networks separate the decision-making from the actual data forwarding.
   * *Performance:* Ensures any device in the data center is never more than one hop (switch) away from any other device.
 * **Top-of-Rack (ToR) Switching:** The physical layout of Spine and Leaf. A single Leaf switch is placed at the top of a server rack. All servers in the rack connect to it, keeping cabling clean and self-contained. Can become very expensive at massive scale.
 * **Point-to-Point Topology:** A direct link between two locations. Common in legacy WANs (T1 / T3 lines) or linking two campus buildings directly together.
-<<<<<<< HEAD
-
-## 4. Network Topologies (Objective 1.6 - Transcript Verified)
-* **Star / Hub-and-Spoke Topology:** All devices connect to a central device (like an Ethernet switch). Devices must communicate through the center hub to talk to each other.
-* **Mesh Topology:** Devices connect over multiple parallel network connections. Provides extreme fault tolerance and the ability to load-balance traffic. Commonly used in Wide Area Networks (WANs).
-* **Hybrid Topology:** A combination of multiple different architectures (e.g., a network that uses Star in one building, but Mesh to connect to another state).
-* **Spine and Leaf (Data Center Architecture):** * *The Connection Rule:* Every Leaf switch connects to every Spine switch. 
-  * *The Limitation:* Leaves **never** connect to other Leaves. Spines **never** connect to other Spines.
-  * *Performance:* Ensures any device in the data center is never more than one hop (switch) away from any other device.
-* **Top-of-Rack (ToR) Switching:** The physical layout of Spine and Leaf. A single Leaf switch is placed at the top of a server rack. All servers in the rack connect to it, keeping cabling clean and self-contained. Can become very expensive at massive scale.
-* **Point-to-Point Topology:** A direct link between two locations. Common in legacy WANs (T1 / T3 lines) or linking two campus buildings directly together.
-
-## 5. Enterprise Network Architectures (Objective 1.6 - Transcript Verified)
-* **Three-Tier Architecture:** A highly scalable and redundant hierarchical design used by large enterprises.
-  * *Core Layer:* The ultra-fast backbone. Connects major sites and routes traffic to central data centers/servers.
-  * *Distribution Layer:* The midpoint. Aggregates connections from all the access switches, enforces routing policies, and provides redundant paths to the core.
-  * *Access Layer:* The network edge. The local switches that end-users, desktops, and printers physically plug into.
-* **Collapsed Core Architecture:** A two-tier design for smaller networks. Combines the Core and Distribution layers into a single layer to save money and simplify troubleshooting, but severely reduces overall network redundancy.
-
-## 6. Traffic Flow Classifications (Objective 1.6 - Transcript Verified)
-* **North-South Traffic:** Traffic entering the network from an external source (the Internet) or leaving the network to an external destination. Crosses perimeter security boundaries.
-* **East-West Traffic:** Traffic that stays entirely within the local data center (e.g., a local file server communicating with an internal image server). Requires internal micro-segmentation, as perimeter firewalls do not inspect this lateral traffic.
-=======
->>>>>>> d73e2b4d9e84865b84c02b6c13c0695715b1d0c4
 
 ## 5. Enterprise Network Architectures (Objective 1.6 - Transcript Verified)
 * **Three-Tier Architecture:** A highly scalable and redundant hierarchical design used by large enterprises.
