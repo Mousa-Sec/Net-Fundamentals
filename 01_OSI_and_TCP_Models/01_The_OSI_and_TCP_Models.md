@@ -62,21 +62,3 @@ When determining what layer a device operates on, look at the highest layer of d
   * *Non-Ephemeral Ports (0 - 1,023):* Permanent, well-known ports typically used by Servers (e.g., Web Server on Port 80 or 443).
   * *Ephemeral Ports (1,024 - 65,535):* Temporary ports randomly assigned to Clients for a single session.
   * *Protocol Isolation:* TCP Port 80 is a completely distinct destination from UDP Port 80.
-
-## 3. Introduction to IP & Transport Protocols (Objective 1.4 - Transcript Verified)
-* **The Encapsulation Process:** Data is packed sequentially to cross the network. 
-  * *Analogy:* The Ethernet Frame is the road, the IP Header is the moving truck, the TCP/UDP Header is the moving box, and the Application Data is the physical items inside the box.
-* **Transmission Control Protocol (TCP):**
-  * *Connection-Oriented:* Sets up a formal session before sending data.
-  * *Reliable Delivery:* Uses acknowledgements to guarantee the data arrived.
-  * *Error Recovery & Flow Control:* Can request dropped packets to be resent and tell the sender to slow down if overloaded.
-* **User Datagram Protocol (UDP):**
-  * *Connectionless:* No formal session setup.
-  * *Unreliable Delivery:* No acknowledgements. "Fire and forget."
-  * *No Error Recovery / Flow Control:* Cannot resend dropped packets. Prioritizes speed over reliability.
-* **IPv4 Sockets & Port Numbers:**
-  * *Socket Definition:* A combination of an IP Address + Protocol (TCP/UDP) + Port Number.
-  * *Total Ports Available:* 0 through 65,535.
-  * *Non-Ephemeral Ports (0 - 1,023):* Permanent, well-known ports typically used by Servers (e.g., Web Server on Port 80 or 443).
-  * *Ephemeral Ports (1,024 - 65,535):* Temporary ports randomly assigned to Clients for a single session.
-  * *Protocol Isolation:* TCP Port 80 is a completely distinct destination from UDP Port 80.
