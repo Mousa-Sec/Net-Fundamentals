@@ -85,3 +85,16 @@ Modern networks separate the decision-making from the actual data forwarding.
 * **NAT Gateway:** Translates private internal IPs to public IPs. Allows internal servers to reach out to the internet (for software updates), but explicitly restricts and drops unsolicited inbound connections from the outside.
 * **Network Security List (NSL / NACL):** A broad cloud firewall. Rules applied here affect the **entire Subnet** or Virtual Cloud Network simultaneously. Lacks fine-grained control.
 * **Network Security Group (NSG):** A highly granular cloud firewall. Rules are applied directly to a specific **Virtual NIC (Network Interface Card)** attached to a single virtual machine.
+
+## 9. Cloud Deployment Models (Objective 1.3 - Transcript Verified)
+* **Public Cloud:** Infrastructure is available to anyone over the public internet (managed by third-party providers like AWS or Azure).
+* **Private Cloud:** A virtualized data center built and maintained exclusively for internal use by a single organization.
+* **Hybrid Cloud:** A mix of Public and Private clouds. Often used when an organization wants the scalability of the public cloud but needs to keep highly sensitive data on-premises.
+
+## 10. Cloud Service Models & The Responsibility Matrix (Objective 1.3 - Transcript Verified)
+* **Software as a Service (SaaS):** On-demand software. The provider manages the entire application, underlying engine, and hardware. The user simply logs in. 
+  * *Examples:* Office 365, Google Mail.
+* **Platform as a Service (PaaS):** The provider manages the hardware and the underlying operating system engine. The customer is given the "building blocks" to develop and maintain their own custom applications. 
+  * *Example:* Salesforce platform development.
+* **Infrastructure as a Service (IaaS):** Also known as **Hardware as a Service (HaaS)**. The provider only manages the physical data center and virtual hardware. The customer is responsible for installing the OS, the software, and managing all security.
+* **The Responsibility Rule:** No matter which cloud model is used, the customer is **always** responsible for the security of their own data, their user accounts (Identity/Directory), and their local end-user devices.
