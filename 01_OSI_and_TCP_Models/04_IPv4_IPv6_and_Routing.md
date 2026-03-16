@@ -52,3 +52,19 @@
   * *Loopback:* `127.0.0.1` (to 127.255.255.254). Used to test the local host's internal TCP/IP stack.
   * *Reserved Class E:* `240.0.0.1` to `255.255.255.255`. Set aside for experimental use; never assigned to standard hosts.
   * *VIP (Virtual IP):* An address not bound to a physical network adapter. Used for High Availability, Load Balancers, or Virtual Machines.
+
+## 3. IPv4 Subnet Masks & CIDR (Objective 1.7 - Transcript Verified)
+* **The Contiguous Rule:** A subnet mask is **always** a continuous, unbroken string of `1`s from left to right, followed by a continuous string of `0`s. You cannot alternate 1s and 0s.
+* **Network vs. Host Boundary:** * The `1`s represent the **Network ID** (the locked routing portion).
+  * The `0`s represent the **Host ID** (the usable IP addresses for local devices).
+* **CIDR / Slash Notation (Classless Inter-Domain Routing):** A shorthand method of writing subnet masks by counting the exact number of contiguous `1`s.
+  * *Example:* A subnet mask of `255.255.255.0` contains 24 ones, so it is written as **`/24`**.
+* **The Subnet Mask "Cheat Sheet":** Because the `1`s must be contiguous, an octet in a subnet mask can **only** ever be one of these 8 decimal values. Memorize this table:
+  * `10000000` = 128
+  * `11000000` = 192
+  * `11100000` = 224
+  * `11110000` = 240
+  * `11111000` = 248
+  * `11111100` = 252
+  * `11111110` = 254
+  * `11111111` = 255
