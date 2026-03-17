@@ -123,3 +123,10 @@ Created to solve the exhaustion of the IPv4 address space.
 * **Tunneling (6to4 / 4in6):** Encapsulating IPv6 traffic inside an IPv4 packet (or vice versa) to cross an incompatible legacy network. Largely deprecated.
 * **Translation (NAT64 & DNS64):** * *DNS64:* Intercepts a DNS request from an IPv6 client and returns a synthetic IPv6 address that points to a translation router.
   * *NAT64:* The specialized router that receives the IPv6 traffic and actively translates it into an IPv4 packet so it can communicate with a legacy IPv4 server.
+
+## 9. Routing Tables & Static Routing (Objective 2.1 - Transcript Verified)
+* **The Routing Table:** The internal database a router uses to determine the "Next Hop" for a packet. If a router receives a packet destined for an IP address that is not in its routing table, the router will **discard** the packet.
+* **Static Routing:** The manual configuration of network routes by a network administrator.
+  * *Advantages:* Zero CPU/Memory overhead, highly secure (no routing broadcasts), and very fast to implement on small networks.
+  * *Ideal Use Case:* **Stub Networks** (remote locations with only a single uplink/exit point to the internet).
+  * *Disadvantages:* Does not scale to large enterprise networks, highly prone to human error (e.g., routing loops), and completely lacks fault tolerance (will not automatically reroute traffic if a link fails).
