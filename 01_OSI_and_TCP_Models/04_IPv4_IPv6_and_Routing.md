@@ -145,3 +145,18 @@ Dynamic routing allows routers to automatically discover network paths and autom
 * **BGP (Border Gateway Protocol):**
   * *Type:* External Gateway Protocol (EGP).
   * *Features:* The routing protocol of the global Internet. Used to connect entirely different Autonomous Systems together.
+
+## 11. Route Selection & Tie-Breakers (Objective 2.1 - Transcript Verified)
+When a router has multiple paths to the same destination, it evaluates them in this strict order:
+* **1. Prefix Length:** The router always selects the most specific route. A `/32` is preferred over a `/24`.
+* **2. Administrative Distance (AD):** If prefix lengths are identical, the router trusts the protocol with the lowest AD.
+  * Directly Connected = 0
+  * Static Route = 1
+  * EIGRP = 90
+  * OSPF = 110
+  * RIP = 120
+* **3. Routing Metric:** If routes are learned from the exact same protocol, the internal metric is used (e.g., lowest OSPF Cost). Metrics cannot be compared across different routing protocols.
+
+## 12. Advanced Routing Operations (Objective 2.1 - Transcript Verified)
+* **First Hop Redundancy Protocol (FHRP):** Provides default gateway redundancy by assigning a Virtual IP (VIP) to multiple physical routers. If the active router fails, the standby router seamlessly assumes the VIP.
+* **Subinterfaces:** Dividing a single physical router interface into multiple virtual interfaces. Typically used to route traffic for multiple VLANs across a single 802.1Q trunk connection (often called "Router on a Stick").
