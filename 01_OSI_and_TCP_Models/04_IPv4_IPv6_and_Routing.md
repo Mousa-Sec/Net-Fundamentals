@@ -160,3 +160,12 @@ When a router has multiple paths to the same destination, it evaluates them in t
 ## 12. Advanced Routing Operations (Objective 2.1 - Transcript Verified)
 * **First Hop Redundancy Protocol (FHRP):** Provides default gateway redundancy by assigning a Virtual IP (VIP) to multiple physical routers. If the active router fails, the standby router seamlessly assumes the VIP.
 * **Subinterfaces:** Dividing a single physical router interface into multiple virtual interfaces. Typically used to route traffic for multiple VLANs across a single 802.1Q trunk connection (often called "Router on a Stick").
+
+## 13. Network Address Translation (NAT) (Objective 2.1 - Transcript Verified)
+A technology designed to conserve the limited supply of public IPv4 addresses and allow private networks to access the internet.
+* **How it works:** A router intercepts outbound traffic, removes the non-routable private Source IP (RFC 1918), and replaces it with a valid Public IP. It maintains a stateful "NAT Table" to reverse the translation when the return traffic arrives.
+* **Basic NAT (1-to-1):** Maps a single private IP to a single public IP. Highly inefficient for large networks.
+* **PAT (Port Address Translation) / NAT Overload:**
+  * The modern standard for internet access. 
+  * The router translates both the IP address *and* the Source Port. 
+  * By tracking unique port numbers in the NAT table, thousands of internal private devices can simultaneously share a single public IP address to access the internet.
