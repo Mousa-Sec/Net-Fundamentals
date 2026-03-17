@@ -109,3 +109,17 @@ An exam-day shortcut that removes the need for binary conversion.
 * **The 255 / 0 Rule:**
   * Mask is `255`: Bring the IP address down exactly as it is.
   * Mask is `0`: Bring down a `0` (for Network ID) or a `255` (for Broadcast ID).
+
+## 7. IPv6 Architecture & Compression (Objective 1.8 - Transcript Verified)
+Created to solve the exhaustion of the IPv4 address space.
+* **Format:** 128-bit address written in Hexadecimal. Divided by colons into 8 groups of 16 bits.
+* **Compression Rule 1 (Leading Zeros):** Any zeros at the very beginning of a 16-bit group can be dropped. 
+  * *Example:* `:0050:` becomes `:50:`.
+* **Compression Rule 2 (Double Colon):** Two or more continuous groups of all zeros can be replaced with a `::`. 
+  * *Constraint:* This can only be done **once** per IPv6 address to prevent routing ambiguity.
+
+## 8. IPv4 to IPv6 Transition Mechanisms (Objective 1.8 - Transcript Verified)
+* **Dual Stack Routing:** The preferred migration method. A single network interface is configured with both an IPv4 and an IPv6 address simultaneously, maintaining two independent routing tables.
+* **Tunneling (6to4 / 4in6):** Encapsulating IPv6 traffic inside an IPv4 packet (or vice versa) to cross an incompatible legacy network. Largely deprecated.
+* **Translation (NAT64 & DNS64):** * *DNS64:* Intercepts a DNS request from an IPv6 client and returns a synthetic IPv6 address that points to a translation router.
+  * *NAT64:* The specialized router that receives the IPv6 traffic and actively translates it into an IPv4 packet so it can communicate with a legacy IPv4 server.
