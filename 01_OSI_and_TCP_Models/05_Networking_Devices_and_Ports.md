@@ -92,3 +92,43 @@ Grouping protocols by how they transmit data makes memorizing the port numbers m
 | :--- | :--- | :--- |
 | **FTP:** 20, 21<br>**SSH:** 22<br>**SFTP:** 22<br>**Telnet:** 23<br>**SMTP:** 25, 587<br>**HTTP:** 80<br>**POP3:** 110<br>**IMAP:** 143<br>**LDAP:** 389<br>**HTTPS:** 443<br>**SMB:** 445<br>**LDAPS:** 636<br>**MS-SQL:** 1433<br>**RDP:** 3389 | **TFTP:** 69<br>**DHCP:** 67, 68<br>**NTP:** 123<br>**SNMP:** 161, 162<br>**Syslog:** 514 | **DNS:** 53<br>**SIP:** 5060, 5061 |
 
+
+---
+
+## 6. Web Filtering: Proxies vs. SWGs
+Proxy servers operate at the Application Layer (Layer 7), allowing them to analyze full URLs rather than just IP addresses. 
+
+* **How Proxies Filter Traffic:**
+  * **URL Filtering:** Compares destination URLs against databases of categorized websites (e.g., blocking gambling or known malware hosts).
+  * **Deep Content Inspection:** Opens data packets to scan for malicious code or phishing links before they reach the user.
+  * **SSL/TLS Inspection:** Decrypts HTTPS traffic to scan content that would otherwise remain hidden.
+
+* **Proxy vs. Secure Web Gateway (SWG)**
+  While traditional proxies focus on privacy and basic site blocking, a **Secure Web Gateway (SWG)** is a dedicated security solution. SWGs provide comprehensive threat prevention, advanced malware scanning, sandboxing, and Data Loss Prevention (DLP).
+
+## 7. Wireless Expansion: WAPs vs. Extenders
+Expanding a wireless network requires understanding the "backhaul"—how the device communicates back to the main network.
+
+| Feature | Wireless Access Point (WAP) | Wi-Fi Extender (Repeater) |
+| :--- | :--- | :--- |
+| **Backhaul Connection** | Wired (Ethernet cable) | Wireless (Wi-Fi) |
+| **Performance** | Full speed (dedicated wired link) | Reduced speed (halves bandwidth to talk to router and client) |
+| **Network Name (SSID)** | Seamless roaming (uses the same SSID) | Usually creates a new network (e.g., "Home_WiFi_EXT") |
+| **Best For** | Enterprise, gaming, permanent setups | Quick fixes, small areas without Ethernet access |
+
+## 8. Enterprise Wireless Infrastructure
+In a professional environment, Access Points are rarely plugged directly into a router. Instead, they rely on Switches and Controllers.
+
+### The Switch (The Muscle & Power)
+Enterprise networks use switches to connect dozens or hundreds of APs.
+* **Power over Ethernet (PoE):** APs typically do not plug into wall outlets. A PoE switch delivers both the data connection and the electrical power over a single Ethernet cable, making ceiling mounting easy.
+* **Traffic Handling:** Switches handle local device-to-device traffic, freeing up the router to focus strictly on routing internet traffic and managing the firewall.
+
+### The Wireless LAN Controller (The Brain)
+Logging into 50 individual APs to change a Wi-Fi password is not scalable. A Wireless LAN Controller (WLC) provides a single management dashboard for the entire wireless fleet.
+
+* **Centralized Configuration:** Push a single SSID, password, or security policy to all APs simultaneously.
+* **Radio Resource Management (RRM):** Automatically adjusts AP channels and transmission power to prevent them from interfering with each other.
+* **Seamless Roaming:** Manages the client "hand-off," ensuring devices smoothly transition from a weak AP to a stronger one without dropping connections.
+* **Security:** Detects unauthorized "rogue" APs plugged into the network and monitors for interference.
+* **Evolution of the WLC:** Controllers used to be physical hardware appliances in a server rack. Today, they are often **Cloud-Managed** (e.g., Cisco Meraki) or **Embedded**, where one physical AP acts as the master controller for the rest.
