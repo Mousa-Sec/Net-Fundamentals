@@ -132,3 +132,14 @@ Logging into 50 individual APs to change a Wi-Fi password is not scalable. A Wir
 * **Seamless Roaming:** Manages the client "hand-off," ensuring devices smoothly transition from a weak AP to a stronger one without dropping connections.
 * **Security:** Detects unauthorized "rogue" APs plugged into the network and monitors for interference.
 * **Evolution of the WLC:** Controllers used to be physical hardware appliances in a server rack. Today, they are often **Cloud-Managed** (e.g., Cisco Meraki) or **Embedded**, where one physical AP acts as the master controller for the rest.
+
+## 16. The IPsec Protocol Suite (Internal Mechanics)
+To secure a VPN, IPsec relies on three specific sub-protocols:
+* **AH (Authentication Header):** Provides **Integrity** and **Authentication**. It does NOT encrypt data.
+* **ESP (Encapsulating Security Payload):** Provides **Confidentiality (Encryption)**. This is the part that hides the data.
+* **IKE (Internet Key Exchange):** Manages the "handshake" and exchanges security keys to set up the tunnel.
+
+## 17. GRE vs. IPsec Recap
+* **GRE:** Can tunnel any protocol but offers **zero encryption** or security on its own.
+* **IPsec:** Provides massive security but is limited in what it can tunnel (no multicast/routing protocols natively).
+* **Solution:** "GRE over IPsec" combines the flexibility of GRE with the encryption of IPsec.
