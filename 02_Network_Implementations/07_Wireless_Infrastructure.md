@@ -41,13 +41,13 @@
   * *Encryption:* Uses **AES** for data confidentiality.
   * *Integrity:* Uses **CBC-MAC** for the message integrity check.
   * *Vulnerability:* Susceptible to offline dictionary/brute-force attacks if the 4-way handshake is captured.
-  *  Mandates AES hardware support; the 4-way handshake is vulnerable to KRACK (Key Reinstallation Attacks) if unpatched . Encryption: Uses AES for data confidentiality. Integrity: Uses CBC-MAC for the message integrity check. Vulnerability: Susceptible to offline dictionary/brute-force attacks if the 4-way handshake is captured.
+  *  Mandates AES hardware support; the 4-way handshake is vulnerable to KRACK (Key Reinstallation Attacks) if unpatched .
     
 * **WPA3 (Wi-Fi Protected Access 3):** Introduced in 2018. Uses the more advanced **GCMP** block cipher mode.
   * *Encryption:* Continues to use **AES** for data confidentiality.
   * *Integrity:* Uses **GMAC** (Galois Message Authentication Code).
   * *Handshake:* Replaces PSK with **SAE** (Simultaneous Authentication of Equals), entirely mitigating offline dictionary attacks and forcing Perfect Forward Secrecy.
-  * Includes OWE (Opportunistic Wireless Encryption) for "open" networks, providing individualized encryption per user to prevent eavesdropping . Encryption: Continues to use AES for data confidentiality. Integrity: Uses GMAC (Galois Message Authentication Code). Handshake: Replaces PSK with SAE (Simultaneous Authentication of Equals), entirely mitigating offline dictionary attacks and forcing Perfect Forward Secrecy.
+  * Includes OWE (Opportunistic Wireless Encryption) for "open" networks, providing individualized encryption per user to prevent eavesdropping . Encryption: Continues to use AES for data confidentiality.
     WPA3-Enterprise offers an optional 192-bit security suite for government/financial use, aligning with CNSA standards
     
 * **Authentication Modes:**
