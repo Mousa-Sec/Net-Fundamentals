@@ -32,19 +32,29 @@
 
 ## 4. Wireless Encryption & Cipher Modes
 * **WEP (Wired Equivalent Privacy):** The original encryption. Highly vulnerable to cryptographic breaks and quickly replaced.
+  Uses RC4 stream cipher with a weak 24-bit Initialization Vector (IV), leading to IV collisions and static key reuse.
+  
 * **WPA (Wi-Fi Protected Access):** A temporary stopgap replacement designed to run on legacy WEP hardware.
+   Introduced TKIP (Temporal Key Integrity Protocol) to patch WEP flaws (per-packet keys, MIC, sequence counters) without new hardware, but is now deprecated and broken .
+  
 * **WPA2 (Wi-Fi Protected Access 2):** Introduced in 2004. Uses the **CCMP** block cipher mode.
   * *Encryption:* Uses **AES** for data confidentiality.
   * *Integrity:* Uses **CBC-MAC** for the message integrity check.
   * *Vulnerability:* Susceptible to offline dictionary/brute-force attacks if the 4-way handshake is captured.
+  *  Mandates AES hardware support; the 4-way handshake is vulnerable to KRACK (Key Reinstallation Attacks) if unpatched .
+    
 * **WPA3 (Wi-Fi Protected Access 3):** Introduced in 2018. Uses the more advanced **GCMP** block cipher mode.
   * *Encryption:* Continues to use **AES** for data confidentiality.
   * *Integrity:* Uses **GMAC** (Galois Message Authentication Code).
   * *Handshake:* Replaces PSK with **SAE** (Simultaneous Authentication of Equals), entirely mitigating offline dictionary attacks and forcing Perfect Forward Secrecy.
+  * Includes OWE (Opportunistic Wireless Encryption) for "open" networks, providing individualized encryption per user to prevent eavesdropping . Encryption: Continues to use AES for data confidentiality.
+    WPA3-Enterprise offers an optional 192-bit security suite for government/financial use, aligning with CNSA standards
+    
 * **Authentication Modes:**
   * *Personal (PSK):* Pre-Shared Key. Everyone types in the exact same password.
   * *Enterprise (802.1X):* Requires a centralized authentication server (like RADIUS). Users log in with individual corporate credentials.
 * **Captive Portal:** A web page intercept that requires users to agree to terms, pay, or authenticate before accessing the internet.
+  Often paired with MAC Authentication Bypass (MAB) for IoT devices that cannot present credentials .
 
 ## 5. Antennas
 * **Omnidirectional Antennas:** Radiate signal outward in a 360-degree circle. Used for standard office/home APs (e.g., standard dipole).

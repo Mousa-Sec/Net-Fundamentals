@@ -164,37 +164,3 @@ A technology designed to conserve the limited supply of public IPv4 addresses an
 * **Dual Stack:** Implementing both protocols on one device for seamless migration.
 * **NAT64:** Translates between IPv6-only devices and IPv4-only servers.
 * **Tunneling (6to4):** Encapsulates IPv6 packets inside IPv4 headers to cross old infrastructure.
-
-## 14. IPv6 Address Types & Transmission (Exam Patch)
-* **Anycast:** A "one-to-nearest" transmission type. Multiple devices share an IP, and the router finds the closest one.
-* **No Broadcast:** IPv6 does not use broadcast traffic; it uses Multicast or Anycast instead.
-
-### **Identification Table**
-| Address Type | IPv6 Prefix | IPv4 Equivalent |
-| :--- | :--- | :--- |
-| **Global Unicast** | `2xxx:` or `3xxx:` | Public IP |
-| **Link-Local** | `FE80::/10` | APIPA (169.254.x.x) |
-| **Unique Local** | `FC00::/7` | Private IP (RFC 1918) |
-| **Loopback** | `::1` | 127.0.0.1 |
-
-## 15. Transition Mechanisms Detailed
-* **Dual Stack:** Implementing both protocols on one device for seamless migration.
-* **NAT64:** Translates between IPv6-only devices and IPv4-only servers.
-* **Tunneling (6to4):** Encapsulates IPv6 packets inside IPv4 headers to cross old infrastructure.
-
-## 14. IPv6 Address Types & Transmission (Exam Patch)
-* **Anycast:** A "one-to-nearest" transmission type. Multiple devices share an IP, and the router finds the closest one.
-* **No Broadcast:** IPv6 does not use broadcast traffic; it uses Multicast or Anycast instead.
-
-### **Identification Table**
-| Address Type | IPv6 Prefix | IPv4 Equivalent |
-| :--- | :--- | :--- |
-| **Global Unicast** | `2xxx:` or `3xxx:` | Public IP |
-| **Link-Local** | `FE80::/10` | APIPA (169.254.x.x) |
-| **Unique Local** | `FC00::/7` | Private IP (RFC 1918) |
-| **Loopback** | `::1` | 127.0.0.1 |
-
-## 15. Transition Mechanisms Detailed
-* **Dual Stack:** Implementing both protocols on one device for seamless migration.
-* **NAT64:** Translates between IPv6-only devices and IPv4-only servers.
-* **Tunneling (6to4):** Encapsulates IPv6 packets inside IPv4 headers to cross old infrastructure.

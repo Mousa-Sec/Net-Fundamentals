@@ -36,11 +36,11 @@ Connecting redundant cables between switches creates a **Switching Loop**. Becau
 
 ## 6. Advanced Switching Concepts (Exam Patch)
 * **LACP (Link Aggregation Control Protocol - 802.3ad):** Bundles multiple physical ports into one logical channel for increased bandwidth and redundancy.
+* LACP is a technology embedded in network hardware that allows combining physical cable connections into one virtual link only when both devices support the same aggregation standard (IEEE 802.3ad or 802.1AX)
 * **Voice VLAN:** A dedicated VLAN for VoIP traffic that automatically applies QoS to ensure call quality.
 * **VLAN Database:** The central storage on a switch that maintains the list of all configured VLANs.
 
 ## 7. Transmission & Duplex Modes
-**Simplex:** Permanent unidirectional communication (One-way only). Sender sends, receiver only receives (e.g., Radio broadcast).
-* **Half-Duplex:** One-way communication at a time (Legacy hubs).
-* **Full-Duplex:** Two-way simultaneous communication (Modern switches).
-* **Auto-Negotiation:** The process where two connected devices "talk" to decide the fastest speed and duplex mode they both support.
+* **Simplex:** One-way communication only (Broadcast TV/Radio).
+* **Half-Duplex:** Two-way communication, but only one direction at a time (Walkie-talkie/Hubs).
+* **Full-Duplex:** Two-way simultaneous communication (Modern Switches).
