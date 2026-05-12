@@ -64,3 +64,14 @@ When checking a specific switch port, these errors indicate physical layer issue
 * **Runts:** Frames that are too small (less than 64 bytes). Usually caused by Ethernet collisions.
 * **Giants:** Frames that are too large (over 1518 bytes) on a network not configured for Jumbo Frames.
 
+
+## 10. Tool Distinctions & Troubleshooting (Exam Patch)
+* **Nmap vs. Wireshark:**
+  * *Nmap:* An active **Network Mapper** used for network discovery, finding live devices, and identifying network topology.
+  * *Wireshark:* A passive **Protocol Analyzer** (Packet Sniffer) used to capture and inspect the deep contents of individual packets.
+* **SNMP vs. Syslog for Performance:**
+  * *SNMP:* Used for **Performance Monitoring** (evaluating efficiency, finding bandwidth bottlenecks, tracking CPU load).
+  * *Syslog:* Used strictly for **Event Logging** (collecting error messages and hardware alerts). It does not monitor performance metrics.
+* **Flow Analysis vs. Packet Capture:**
+  * *NetFlow & sFlow:* Used for **Traffic Flow Analysis** (metadata: who talked to whom, and how much data was sent).
+  * *Packet Sniffing:* Used to examine the actual payload/contents of the traffic.
