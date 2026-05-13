@@ -68,3 +68,28 @@ This is a more sophisticated Layer 2 attack that exploits how switches handle th
   * Force **tagging of the Native VLAN** across all trunks so the first switch doesn't strip the outer tag.
   * Move all end-user ports off of the Native VLAN.
 
+
+## 6. MAC Flooding
+This attack targets the **CAM Table (Content Addressable Memory)**, also known as the MAC Address Table, of a network switch.
+
+### The Mechanics of a Switch
+* **The Learning Process:** A switch examines the **Source MAC address** of every inbound frame. If the address is new, it records the MAC and the physical port it arrived on in the CAM table.
+* **Directed Forwarding:** When a switch knows the destination MAC, it sends the frame *only* to the specific port associated with that MAC.
+* **Unicast Flooding (Normal Behavior):** If the switch does **not** know the destination MAC address (it's not in the table), it must "flood" the frame out of every port except the one it arrived on to ensure it reaches its destination.
+
+### The Attack: MAC Flooding
+* **The Goal:** To fill up the limited space in the switch's CAM table with thousands of fake, random MAC addresses.
+* **The Execution:** An attacker uses a tool (like `macof`) to blast the switch with frames containing randomized source MAC addresses.
+* **The "Fail-Open" Result:** Once the CAM table is full, the switch can no longer learn new addresses. It begins to treat **every** incoming frame as an "unknown unicast." 
+* **Impact:** The switch effectively turns into a **Hub**. All traffic is broadcast to every port on the switch.
+* **Attacker's Benefit:** The attacker can now sit on their own port and use a packet sniffer (like Wireshark) to capture sensitive traffic from *other* conversations that should have been private.
+
+
+### Defense: Port Security
+Modern managed switches have a feature called **Port Security** to prevent this exact attack.
+* **MAC Limiting:** You can configure a switch port to only learn a specific number of MAC addresses (e.g., only 1 or 2 per port). If an attacker tries to send 5,000, the port shuts down.
+* **Sticky MACs:** The switch "remembers" the first MAC address it sees on a port and ignores or blocks any others.
+* **Violation Actions:** You can choose what happens when the limit is reached:
+  * **Protect:** Drops traffic from the extra MACs but keeps the port up.
+  * **Restrict:** Drops traffic and sends a log message/SNMP trap.
+  * **Shutdown:** Disables the entire physical port (requires an admin to manually turn it back on).
