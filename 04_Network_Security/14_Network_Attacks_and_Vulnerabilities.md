@@ -156,3 +156,42 @@ A malicious version of a Rogue AP designed for deception.
 The video emphasizes that **On-Path (Man-in-the-Middle)** is the *ultimate goal* of many of these attacks (ARP poisoning, Rogue DHCP, Evil Twins).
 * **Core Action:** Receive, examine/modify, and forward.
 * **Primary Mitigation:** **Encryption at all layers.** Even if the attacker sits in the middle, they cannot read the payload if it is encrypted via TLS/HTTPS or a VPN.
+
+## 11. Social Engineering
+Social engineering is the psychological manipulation of people into performing actions or divulging confidential information.
+
+### A. Phishing
+The most common social engineering attack, typically delivered via email.
+* **The Goal:** To trick the user into clicking a malicious link or downloading an infected attachment.
+* **Red Flags:**
+  * **Mismatched Domains:** The "From" address doesn't match the actual company (e.g., an email from "Rackspace" coming from an `@icloud.com` address).
+  * **Urgency & Threats:** "Your account has been suspended! Click here now to confirm."
+  * **Visual Inconsistencies:** Poor grammar, spelling errors, mismatched fonts, or low-resolution logos.
+* **Technical Countermeasure:** Check the destination URL by hovering over the link without clicking. Use a sandboxed Virtual Machine (VM) to investigate suspicious links safely.
+
+### B. Shoulder Surfing
+An attacker looks over a user's shoulder to view sensitive information on a screen or watch them type a password.
+* **Public Risks:** Airports, coffee shops, and airplanes are high-risk environments.
+* **Advanced Methods:** Attackers may use binoculars, telescopes, or compromised webcams to view screens from a distance.
+* **Prevention:**
+  * **Privacy Filters:** Physical screens placed over a monitor that make the display appear black to anyone not sitting directly in front of it.
+  * **Environmental Awareness:** Positioning your screen away from windows and sitting with your back to a wall in public.
+
+
+### C. Physical Access: Tailgating and Piggybacking
+These attacks aim to bypass front-door security (electronic locks, badges) to gain access to a physical office.
+* **Tailgating:** An unauthorized person follows closely behind an authorized person through a door before it closes, without the authorized person's knowledge.
+* **Piggybacking:** An authorized person **knowingly** allows an unauthorized person to enter. 
+  * *Tactic:* The attacker may carry boxes of donuts or heavy equipment, prompting a helpful employee to hold the door open for them.
+* **Prevention:**
+  * **Access Control Vestibule (Airlock):** A mechanical system with two doors where the first must close before the second can open, allowing only one person through at a time.
+  * **Corporate Culture:** Training employees to verify badges and challenge anyone they don't recognize.
+
+### D. Dumpster Diving
+Searching through a company's trash to find sensitive information that can be used for future attacks.
+* **Valuable Items:** Employee names, contact lists, project details, quarterly reports, and internal memos.
+* **Legality:** In many jurisdictions (including the U.S.), garbage is considered public property once it is placed on the curb, unless it is on private property with "No Trespassing" signs.
+* **Prevention:**
+  * **Shredding:** Using cross-cut shredders for all sensitive documents.
+  * **Incineration:** Burning sensitive documents (common in government/military).
+  * **Security:** Placing garbage bins in fenced, locked, and camera-monitored areas.
