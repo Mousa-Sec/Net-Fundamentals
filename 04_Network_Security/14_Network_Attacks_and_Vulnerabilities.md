@@ -195,3 +195,35 @@ Searching through a company's trash to find sensitive information that can be us
   * **Shredding:** Using cross-cut shredders for all sensitive documents.
   * **Incineration:** Burning sensitive documents (common in government/military).
   * **Security:** Placing garbage bins in fenced, locked, and camera-monitored areas.
+
+## 12. Malware (Objective 4.2)
+Malware (Malicious Software) is a broad term for any software designed to disrupt, damage, or gain unauthorized access to a computer system.
+
+### A. Replication & Spread
+* **Virus:** Malware that can replicate itself but **requires human intervention** to spread (e.g., clicking a link or opening an infected file).
+* **Worm:** A highly dangerous category of malware that replicates and spreads **automatically** across the network without any human interaction. It exploits unpatched system vulnerabilities (e.g., the EternalBlue exploit).
+
+### B. Access & Deception
+* **Trojan Horse:** Malware that disguises itself as legitimate software (like a game or utility). Once executed, it performs its malicious task in the background.
+* **Rootkit:** A collection of tools designed to gain high-level (root/admin) access while **hiding its presence** from the operating system and antivirus software. It is notoriously difficult to detect and remove.
+* **Backdoor:** A method of bypassing normal authentication to gain remote access to a system. Malware often installs a backdoor as its first step to ensure persistent access.
+
+### C. Financial & Data Impact
+* **Ransomware:** Encrypts a user's files and demands payment (usually in cryptocurrency) in exchange for the decryption key.
+  * *Purple Team Note:* Modern ransomware often includes "double extortion," where data is also exfiltrated to be leaked if the ransom isn't paid.
+* **Spyware:** Secretly monitors user activity (web browsing, webcam, microphone) to collect information.
+* **Keylogger:** A specific type of spyware that records every keystroke made by the user to capture usernames and passwords.
+* **Adware:** Software that automatically displays or downloads advertising material. While often just annoying, it can be a gateway for more malicious infections.
+
+### D. Targeted Execution
+* **Logic Bomb:** Malware that lies dormant until a specific condition is met, such as a specific date/time or an action (e.g., an employee's name being removed from a payroll database).
+* **Botnet:** A collection of "zombie" computers (Bots) controlled by an attacker's **Command and Control (C2)** server. These are used for massive DDoS attacks or spam campaigns.
+
+
+### E. Other System Impacts
+* **Bloatware:** Unwanted software pre-installed on new computers. While not always malicious, it wastes system resources (CPU, RAM, Storage) and increases the attack surface.
+
+## 13. Malware Defense Best Practices
+* **Patching:** Keeping the Operating System and all applications updated is the #1 defense against worms.
+* **User Education:** Training users to never click embedded email links or suspicious pop-ups.
+* **Least Privilege:** Ensuring users do not have administrative rights prevents many types of malware from installing themselves.
