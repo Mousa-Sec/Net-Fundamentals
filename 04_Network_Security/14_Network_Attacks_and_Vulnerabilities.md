@@ -227,3 +227,22 @@ Malware (Malicious Software) is a broad term for any software designed to disrup
 * **Patching:** Keeping the Operating System and all applications updated is the #1 defense against worms.
 * **User Education:** Training users to never click embedded email links or suspicious pop-ups.
 * **Least Privilege:** Ensuring users do not have administrative rights prevents many types of malware from installing themselves.
+
+## 14. Vulnerability Types & Security Posture
+Attackers don't just "guess"; they look for specific types of weaknesses to exploit.
+* **Zero-Day:** A vulnerability that is unknown to the vendor. There is "zero days" of protection available because no patch exists yet.
+* **Legacy Systems:** Older hardware or software that is no longer supported by the manufacturer and cannot be patched (e.g., an old Windows XP machine running a hospital's MRI scanner).
+* **Misconfigurations:** Human error, such as leaving a default password on a router or leaving a port open on a firewall that should be closed.
+* **Unnecessary Services:** Every open port or running service is a potential entry point. If you aren't using Telnet, disable it to reduce the **Attack Surface**.
+
+## 15. Defense in Depth (Layered Security)
+Defense in Depth is the strategy of stacking multiple security controls so that if one fails, others are there to stop the attacker.
+* **Physical Layer:** Fences, locks, badges, and cameras.
+* **Technical Layer:** Firewalls, IPS, Encryption, and MFA.
+* **Administrative Layer:** Security policies, employee background checks, and user training.
+* **The Human Layer:** The "final wall." Training users to recognize a phishing email before they click it.
+
+## 16. Security Auditing & Assessment
+* **Vulnerability Scanning:** Using automated tools (like Nessus) to find known weaknesses in a system without actually exploiting them.
+* **Penetration Testing:** A "Red Team" exercise where an ethical hacker (like **EthicalBlitz**) actively tries to exploit vulnerabilities to see how far they can get.
+* **Posture Assessment:** A broad look at the entire organization's security to see if policies are being followed and if the defenses are actually effective.
