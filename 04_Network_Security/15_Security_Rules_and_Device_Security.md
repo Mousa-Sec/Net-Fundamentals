@@ -45,3 +45,48 @@ A Key Management System (KMS) provides a singular control plane to create, distr
 ### C. Lifecycle Auditing & Non-Repudiation
 * **Granular Reporting:** A central KMS logs exactly *when* a key is used, *who* requested it, and *which* target system was accessed. 
 * **Revocation Control:** If an administrator leaves the organization or a private key file is compromised, the key can be instantly revoked globally from the central dashboard, severing access to all linked internal infrastructure.
+
+## 7. Deep-Dive: Firewall Logic and Rule Structures
+Firewall rule bases use a multidimensional approach to classify and filter traffic, applying strict conditional logic to every packet attempting to cross a boundary.
+
+### A. The Evaluation Architecture
+* **Rule Composition Elements:** An Access Control List (ACL) or security policy combines multiple criteria into a single conditional statement:
+  * **Source / Destination Zone:** The logical grouping of networks where the traffic originated and where it is heading.
+  * **Source / Destination IP Address:** Can target a single host IP or an entire subnet block using CIDR notation.
+  * **Protocol Type:** Specifies the transport layer standard (TCP, UDP, or ICMP).
+  * **Destination Port:** The specific service identifier target (e.g., Port 443 for HTTPS).
+  * **Contextual Data:** Next-Generation Firewalls (NGFWs) add context like Active Directory Usernames, time of day constraints, or specific application signatures.
+* **Sequential Rule Parsing:** Packets are processed in strict mathematical order starting at Rule 1. The moment a packet satisfies all criteria of a rule, that rule's disposition (**Allow** or **Deny**) is instantly executed, and all remaining rules in the stack are ignored.
+* **The Implicit Deny Blueprint:** If a packet fails to match every single explicit rule from top to bottom, it is handled by the **Implicit Deny**. While invisible in the console, it serves as a catch-all block at the very bottom of the rule base to drop unapproved traffic types.
+
+---
+
+## 8. Layer 7 Traffic Inspection & Filtration
+As attackers migrate up the OSI stack to exploit web vectors, basic Layer 3/4 filtering becomes insufficient. Security appliances deploy deep application-layer inspection mechanisms.
+
+### A. URL and URI Filtering Mechanics
+* **Uniform Resource Identifier (URI) Enforcement:** Targets web traffic based on string paths and domain targets. Rather than maintaining massive, rapidly changing whitelists or blacklists of individual IP addresses, networks use dynamic categorization engines.
+* **Category-Based Blocking:** Web parameters are automatically categorized into domains like *Hacking*, *Gambling*, *Auction Sites*, or *Malware C2*. Administrators can choose to block entire blocks globally with a single click.
+* **Circumvention Defenses:** Attackers and users constantly attempt to bypass URL filters using web proxies, specialized tunneling techniques, or VPNs. To prevent this, Next-Generation Firewalls integrate URL filtering directly into the core packet processing engine to verify traffic signatures alongside rule bases.
+
+### B. Content Filtering Strategies
+* **Deep Packet Inspection (DPI):** Content filtering looks past the IP header and deep into the payload data area of a packet.
+* **Data Loss Prevention (DLP):** Used to audit and block sensitive organizational documents from slipping past the perimeter. It scans traffic for specific text patterns, file extensions, encryption states, corporate classification markings, or structured sequences like social security and credit card numbers.
+* **Security & Compliance Controls:** Used inside corporate networks to filter out inappropriate material, manage parental blocks in home environments, and scan incoming web files for malicious signatures via inline antivirus and antimalware utilities.
+
+---
+
+## 9. Advanced Zone Architecture & Topologies
+To simplify firewall administration and maintain structural integrity, modern infrastructures use a zone-based design.
+
+
+### A. Zone-Based Firewall (ZBF) Paradigms
+* **Abstraction Advantage:** Instead of defining source and destination parameters using rigid IP addresses, firewall rules point directly to **Security Zones**. This prevents administrators from needing to re-write firewall rule bases whenever subnets expand or local IP blocks are modified.
+* **Macro Rules:** Policies are established *between* the macro zones (e.g., `Allow Trusted Zone -> Untrusted Zone`).
+
+### B. Common Enterprise Zone Typologies
+1. **Untrusted Zone (External):** Where the public internet and unmanaged external traffic inputs exist.
+2. **Trusted Zone (Internal):** The internal corporate LAN where workstations, active directory infrastructure, and core business applications reside.
+3. **Screened Subnet (DMZ):** An isolated network buffer zone containing public-facing endpoints (such as web systems, mail servers, and external DNS caches).
+   * *Flow Constraint:* While the *Untrusted Zone* can enter the *Screened Subnet* to access web assets, strict zone-based rules prevent the *Screened Subnet* from initiating new outbound communication requests back into the *Trusted Zone*. If an attacker compromises a web application in the DMZ, they remain structurally contained.
+4. **Granular Tiered Zones:** High-security infrastructures further subdivide environments into distinct **Server Zones**, **Database Tiers**, and specialized administrative **Management Zones**.
