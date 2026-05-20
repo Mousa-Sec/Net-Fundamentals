@@ -44,7 +44,7 @@ Modern networks separate the decision-making from the actual data forwarding.
 * **Three-Tier Architecture:** A highly scalable and redundant hierarchical design used by large enterprises.
   * *Core Layer:* The ultra-fast backbone. Connects major sites and routes traffic to central data centers/servers.
   * *Distribution Layer:* The midpoint. Aggregates connections from all the access switches, enforces routing policies, and provides redundant paths to the core.
-  * *Access Layer:* The network edge. The local switches that end-users, desktops, and printers physically plug into.
+  * *Access Layer:* The network edge. The local switches that end-users, desktops, and printers physically plug into (Provides the physical or wireless connections for end devices to access the network). Ensures that critical traffic receives priority over less important traffic and  implements security measures to control network access
 * **Collapsed Core Architecture:** A two-tier design for smaller networks. Combines the Core and Distribution layers into a single layer to save money and simplify troubleshooting, but severely reduces overall network redundancy.
 
 ## 6. Traffic Flow Classifications (Objective 1.6 - Transcript Verified)
