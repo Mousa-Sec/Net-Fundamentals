@@ -28,11 +28,28 @@ Minimizing signal corruption requires preserving structural boundaries and insul
 * **Insulation Architectural Models:**
   * **Unshielded Twisted Pair (UTP):** Relies exclusively on regular plastic insulation wraps and tight differential pair twisting to cancel external noise fields.
   * **Shielded Twisted Pair (STP):** Encases pairs or entire core bundles inside metallic foil or braided copper wraps to block outside noise fields. Requires a dedicated continuous grounding wire to bleed off intercepted electrical charges safely.
-* **Cross Talk (XT) Dynamics:**
-  * **Near-End Cross Talk (NEXT):** The empirical measurement of signal bleeding across separate wire pairs on the local end of the run closest to the generating transmission engine.
-  * **Far-End Cross Talk (FEXT):** The measurement of signal migration monitored at the opposite remote terminal end of the run.
-  * **Alien Cross Talk (AXT):** High-frequency interference leaking between entirely separate physical cables bound inside the same tightly packed bundle.
-  * **Attenuation-to-Crosstalk Ratio (ACR):** A mathematical assessment comparing absolute signal attenuation against near-end cross talk noise strength. Expressed as a Signal-to-Noise Ratio (SNR), a high delta ensures a highly readable payload, whereas a tight 1:1 ratio obliterates the signal.
+## 📡 Cross Talk (XT) Dynamics
+
+> **Cross Talk (XT)** is a form of electromagnetic interference (EMI) that occurs when data moving through one copper wire accidentally leaks into an adjacent wire, causing signal degradation and data corruption.
+
+When certifying and testing physical-layer copper infrastructure, technicians and security auditors evaluate the following core metrics:
+
+### 📊 Performance Metrics
+
+| Metric | Full Name | Definition |
+| :--- | :--- | :--- |
+| **NEXT** | Near-End Cross Talk | Measures the amount of signal leakage that happens right at the source end (the local connector) where the device is transmitting. |
+| **FEXT** | Far-End Cross Talk | Measures the signal leakage that travels the full distance of the cable and is detected at the distant receiving end. |
+| **AXT** | Alien Cross Talk | High-frequency interference that bleeds between completely separate, independent cables when they are packed tightly together in a bundle. |
+| **ACR** | Attenuation-to-Crosstalk Ratio | A comparison between the strength of the actual data signal (which fades over distance) and the strength of the crosstalk noise. |
+
+---
+
+### 🔍 Signal Integrity Impact (ACR)
+The **Attenuation-to-Crosstalk Ratio (ACR)** essentially functions as a **Signal-to-Noise Ratio (SNR)** for copper cabling:
+* **High Delta/Gap:** The real data signal easily "hears" over the background noise, resulting in a highly readable, clear payload.
+* **Tight 1:1 Ratio:** The crosstalk static is as loud as the data transmission, completely obliterating the signal and triggering high **CRC error** rates.
+  
 * **Physical Integrity Guidelines:**
   * **Maintain the Twist:** Never untwist copper conductor loops beyond the bare minimum required to seat them into an RJ45 modular plug or punchdown termination field. Maintaining pair geometry prevents NEXT spikes.
   * **Cat 6A Spacers:** Cat 6A installations implement internal plastic spline separators to isolate wire pairs from each other and eliminate near-field noise.
