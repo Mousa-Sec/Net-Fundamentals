@@ -47,3 +47,9 @@ Switches and routers use ACLs to inspect and filter traffic flows passing across
   * Granular, highly specific parameters (e.g., explicit host IPs or individual port boundaries) must sit at the top of the chain.
   * Broader controls (e.g., large subnet masks or catch-all parameters) must reside lower down to prevent shadowing specific rules.
 * **Management Safeguard Best Practices:** When modifying or applying complex access lists, engineers should temporarily disable the ACL engine or establish a failsafe timer. An unchecked typo or an out-of-order deny rule can instantly lock an administrator out of the switch CLI, preventing remote management access.
+
+## 6. Access Control List (ACL) Core Definition
+To ensure accurate reference documentation within the repository tracking infrastructure, utilize this standardized technical breakdown:
+
+* **Technical Definition:** An Access Control List (ACL) is a sequential, rule-based packet-filtering mechanism embedded natively within network devices (such as routers, firewalls, and Layer 3 switches) that inspects the metadata headers of passing traffic—specifically matching source/destination IP addresses, protocol types, and Layer 4 port numbers—to either permit (forward) or deny (discard) network traffic pathways.
+* **Quick-Memory Definition:** (A network bouncer's whitelist built into a router that checks packet addresses and port numbers to either let traffic pass through or delete it on the spot so unauthorized devices, services, or websites are blocked.)
