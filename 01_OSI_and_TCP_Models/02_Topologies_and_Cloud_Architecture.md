@@ -111,3 +111,34 @@ A wide area network built to manage the complexities of decentralized cloud envi
   2. The source VTEP wraps the frame inside a **VXLAN Header** (containing the VNI tag), nests it into a **UDP Packet**, and applies an **Outer IP Header** addressed directly to the destination VTEP.
   3. The packet routes over standard Layer 3 routers.
   4. The receiving VTEP strips away the outer wrapper and drops the clean, original Layer 2 frame straight into the destination host system.
+ 
+
+# CompTIA Network+ N10-009 — Objective 1.8: Zero Trust
+
+### Core Concept of Zero Trust
+* **Definition:** A holistic security architecture built on the premise that every user, device, and application is inherently untrusted, regardless of whether they reside inside or outside the network boundary.
+* **In-Bracket Definition:** `(A security model where no user or device is trusted by default, requiring continuous verification at every step)`
+* **Key Requirements:** Moves away from perimeter-only focus by deploying internal security safeguards, including micro-segmentation, encryption, multi-factor authentication (MFA), and constant monitoring.
+
+### Adaptive Identity (Policy-Based Authentication)
+* **Definition:** A dynamic access management approach that analyzes multiple real-time contextual risk indicators before approving a login request.
+* **In-Bracket Definition:** `(Checking who, where, and how a user is logging in to adjust security requirements dynamically)`
+* **Risk Factors Assessed:**
+  * **User History:** Distinguishes between internal staff members and external vendors.
+  * **Geographical Origin:** Scans for standard local logins vs. sudden foreign connection sources.
+  * **Connection Vector:** Reviews the source IP address, network type, and time of day.
+* **Adaptive Rule Execution:** A user logging in during regular business hours from the office may face low friction, while a connection from an unusual location or at odd hours prompts a forced denial or an elevated MFA challenge.
+
+### Context-Aware Authorization & Least Privilege
+* **Definition:** Tailoring an authenticated user's exact operational permissions based on their role, device state, and location metrics.
+* **In-Bracket Definition:** `(Limiting what a user can see and do based on their job role and current security risk level)`
+* **Principle of Least Privilege:** Restricting users to the absolute minimum levels of system access essential for their job functions. 
+* **Malware Mitigation:** Limiting broad administrative privileges helps block malware from inheriting deep system access rights, preventing lateral infection across the enterprise network.
+
+### SASE (Secure Access Service Edge)
+* **Definition:** A decentralized, cloud-native architecture that combines software-defined networking with advanced cybersecurity features directly at the service edge.
+* **In-Bracket Definition:** `(A cloud-based system that combines network routing and security services to protect users working from anywhere)`
+* **Core Pillars:**
+  * **Network as a Service (NaaS):** Manages global traffic engineering, routing, and Quality of Service (QoS).
+  * **Security as a Service (SECaaS):** Implements Zero Trust Network Access (ZTNA), Firewall as a Service (FWaaS), and DNS security inline.
+* **Operational Workflow:** Endpoints utilize an automated SASE client to run secure, policy-enforced cloud tunnels in the background without requiring manual user activation.
