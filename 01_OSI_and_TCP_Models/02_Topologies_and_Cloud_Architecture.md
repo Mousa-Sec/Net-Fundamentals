@@ -46,8 +46,8 @@ Modern networks separate the decision-making from the actual data forwarding.
 * **VPN Connection:** Allows remote physical sites or individual users to establish an encrypted tunnel directly into the private VPC over the internet.
 
 ## 8. Cloud Gateways & Firewalls Objective 1.3
-* ****Multitenancy:**** Multiple customers sharing one software instance securely.
-  **In-Bracket Definition:** `(A flexible computing model where multiple users share physical hardware and scale resources dynamically)`
+* **Multitenancy:** Multiple customers sharing one software instance securely.
+  ***In-Bracket Definition:** `(A flexible computing model where multiple users share physical hardware and scale resources dynamically)`
   * **Elasticity:** The ability to scale system resources up/out during traffic spikes and scale them down/in dynamically when demand decreases to manage expenses.
  * **NSG (Network Security Group):** A firewall applied to a specific Virtual NIC (highly granular) for strict device-level isolation.
    **In-Bracket Definition:** `(A precise firewall policy applied directly to individual virtual network cards)`
