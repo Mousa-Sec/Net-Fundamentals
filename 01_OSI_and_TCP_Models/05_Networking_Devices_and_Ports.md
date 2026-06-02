@@ -14,10 +14,7 @@ Understanding the physical and logical hardware used to connect, secure, and man
 * **Proxy Servers:** Act as intermediaries for client requests, often caching web pages and filtering malicious content.
   * *Explicit Proxies:* Require manual OS or browser configuration.
   * *Transparent Proxies:* Operate invisibly without endpoint configuration.
-* **Network Storage Access:**
-  * *NAS (Network Attached Storage):* File-level access; editing a file usually requires downloading the whole file.
-  * *SAN (Storage Area Network):* Block-level access; allows modifying just the changed data blocks of a massive file, highly efficient for enterprise databases and Virtual Machines. 
-
+    
 ## 2. Critical Protocols and Tunneling (1.4)
 Protocols used for network diagnostics, management, and secure tunneling.
 
