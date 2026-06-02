@@ -15,11 +15,21 @@
 * **IDS vs. IPS:**
   * *IDS (Intrusion Detection System):* Monitors for known exploits (buffer overflows, XSS) and triggers alerts/alarms. Cannot block traffic.
   * *IPS (Intrusion Prevention System):* Sits in the flow of traffic and actively blocks attacks before they enter the network.
-* **Proxy Server:** A middleman device that makes requests on the user's behalf to perform URL filtering, caching, and malware scanning.
-  * *Explicit Proxy:* Requires configuration on the user's OS or browser.
-  * *Transparent Proxy:* Operates invisibly on the network without user configuration.
 * **Load Balancer:** Distributes inbound traffic across multiple backend servers to maintain uptime. 
   * *Features:* TCP/SSL Offloading (handling the encryption math), Caching, and Quality of Service (QoS) to prioritize specific traffic.
+    ## Web Filtering: Proxies vs. SWGs
+    * **Proxy Server:** A middleman device that makes requests on the user's behalf to perform URL filtering, caching, and malware scanning.
+  * *Explicit Proxy:* Requires configuration on the user's OS or browser.
+  * *Transparent Proxy:* Operates invisibly on the network without user configuration.
+    
+Proxy servers operate at the Application Layer (Layer 7), allowing them to analyze full URLs rather than just IP addresses. 
+* **How Proxies Filter Traffic:**
+  * **URL Filtering:** Compares destination URLs against databases of categorized websites (e.g., blocking gambling or known malware hosts).
+  * **Deep Content Inspection:** Opens data packets to scan for malicious code or phishing links before they reach the user.
+  * **SSL/TLS Inspection:** Decrypts HTTPS traffic to scan content that would otherwise remain hidden.
+
+* **Proxy vs. Secure Web Gateway (SWG)**
+  While traditional proxies focus on privacy and basic site blocking, a **Secure Web Gateway (SWG)** is a dedicated security solution. SWGs provide comprehensive threat prevention, advanced malware scanning, sandboxing, and Data Loss Prevention (DLP).
 
 ## 3. Network Storage (Objective 1.2)
 * **NAS (Network Attached Storage):** Provides **File-level access**. When modifying a document, the entire file must be pulled across the network to memory, changed, and written entirely back.
