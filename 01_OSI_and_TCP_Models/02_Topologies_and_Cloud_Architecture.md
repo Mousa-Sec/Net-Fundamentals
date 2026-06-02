@@ -46,13 +46,24 @@ Modern networks separate the decision-making from the actual data forwarding.
 * **VPN Connection:** Allows remote physical sites or individual users to establish an encrypted tunnel directly into the private VPC over the internet.
 
 ## 8. Cloud Gateways & Firewalls Objective 1.3
-* * **Multitenancy:** Multiple customers sharing one software instance securely.
-  * * **NSG (Network Security Group):** A firewall applied to a specific Virtual NIC (highly granular).
+* **Multitenancy:** Multiple customers sharing one software instance securely.
+* **In-Bracket Definition:** `(A flexible computing model where multiple users share physical hardware and scale resources dynamically)`
+* * **Elasticity:** The ability to scale system resources up/out during traffic spikes and scale them down/in dynamically when demand decreases to manage expenses.
+ * **NSG (Network Security Group):** A firewall applied to a specific Virtual NIC (highly granular) for strict device-level isolation.
+   **In-Bracket Definition:** `(A precise firewall policy applied directly to individual virtual network cards)`
+    **Operational Benefit:** Grants high administrative granularity across the exact same subnet, but increases overall management overhead.
 * **NSL / NACL (Network Security List):** A firewall applied to an entire Subnet (less granular).
+  **In-Bracket Definition:** `(A firewall list that applies security rules broadly across entire cloud subnets)`
+  **Filtering Criteria:** Rules intercept TCP/UDP ports (e.g., 443, 22) and target source/destination IP variables using standard CIDR block notation.
 * **Internet Gateway (IGW):** A two-way connection. Allows cloud instances in a public subnet to be accessed from anywhere on the public internet (e.g., a public-facing web server). Allows 2-way internet traffic for cloud instances.
 * **Network Security Group (NSG):** A highly granular cloud firewall. Rules are applied directly to a specific **Virtual NIC (Network Interface Card)** attached to a single virtual machine.
 * * **NAT Gateway:** Translates private internal IPs to public IPs. Allows internal servers to reach out to the internet (for software updates), but explicitly restricts and drops unsolicited inbound connections from the outside. In short, allows outbound internet access but restricts unsolicited inbound traffic.
 * **Direct Connect:** A dedicated, private physical connection to a cloud provider (bypasses the public internet).
+
+### Network Function Virtualization (NFV)
+* **Definition:** Emulating physical network appliances (routers, switches, firewalls) purely as software-based virtual components within a hypervisor system.
+* **In-Bracket Definition:** `(Replacing physical network hardware like routers and firewalls with virtual software instances)`
+* **Key Concept:** Consolidates hundreds of physical servers and hardware network devices down into virtual instances running inside unified, high-powered hardware nodes.
 
 ## 9. Cloud Deployment Models Objective 1.3
 * **Public Cloud:** Infrastructure is available to anyone over the public internet (managed by third-party providers like AWS or Azure).
