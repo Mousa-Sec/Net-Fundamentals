@@ -62,3 +62,25 @@ When determining what layer a device operates on, look at the highest layer of d
   * *Non-Ephemeral Ports (0 - 1,023):* Permanent, well-known ports typically used by Servers (e.g., Web Server on Port 80 or 443).
   * *Ephemeral Ports (1,024 - 65,535):* Temporary ports randomly assigned to Clients for a single session.
   * *Protocol Isolation:* TCP Port 80 is a completely distinct destination from UDP Port 80.
+ 
+# CompTIA Network+ N10-009 — Objective 1.4: Network Communication
+
+### 1. Unicast
+* **Definition:** A one-to-one transmission where data moves directly from a single sending station to a single receiving station.
+* **In-Bracket Definition:** `(A one-to-one communication where data goes directly from one specific device to another)`
+* **Key Details:** Standard method for web traffic, emails, and file transfers. Supported by both ipv4 and IPv6. Inefficient for distributing identical data to multiple targets because it requires entirely duplicate sessions.
+
+### 2. Multicast
+* **Definition:** A one-to-many communication setup where data is delivered simultaneously to a specific, designated group of recipients.
+* **In-Bracket Definition:** `(A one-to-many communication where data is sent to a specific group of devices that subscribed to the feed)`
+* **Key Details:** Receivers must explicitly subscribe to the feed. Used for multimedia streams, live stock data, and router updates. Requires specialized network equipment capable of tracking multicast groups; supported in both ipv4 and IPv6.
+
+### 3. Anycast
+* **Definition:** A one-to-one-of-many delivery method where a single destination IP address is shared by multiple devices, and traffic is automatically routed to the single closest node.
+* **In-Bracket Definition:** `(A communication method that routes traffic to the single closest device among a group sharing the same IP address)`
+* **Key Details:** Supported by both ipv4 and IPv6. Ideal for Anycast DNS and CDNs to route user queries to the geographically or logically nearest functional data center.
+
+### 4. Broadcast
+* **Definition:** A one-to-all transmission where a single packet is sent out to be received and processed by every single device on the local network segment.
+* **In-Bracket Definition:** `(A one-to-all communication where a packet is sent to every single device on the local network)`
+* **Key Details:** Confined to the local broadcast domain; routers block broadcasts from exiting the subnet. Essential for ipv4 operations like ARP requests. **Completely eliminated in IPv6**, which replaces broadcast functions with targeted multicast operations to optimize device efficiency.
