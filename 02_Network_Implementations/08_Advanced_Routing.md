@@ -25,7 +25,7 @@
   * *Features:* The routing protocol of the global Internet. Used to connect entirely different Autonomous Systems together
   
 * **OSPF (Open Shortest Path First):**
-* *Use:* It builds a complete map of the network
+  * Use:* It builds a complete map of the network
   * *Type:* Interior Gateway Protocol (IGP) / Link-State.
   * *Features:* An open standard supported by almost all vendors.
   * *Metric:* Uses **Cost** (based on link bandwidth/speed) to determine the best path.
