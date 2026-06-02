@@ -10,6 +10,19 @@
 * **802.11ax (Wi-Fi 6):** 2.4 GHz, 5 GHz (Wi-Fi 6e has 6GHz). Introduced **OFDMA** (Orthogonal Frequency-Division Multiple Access), drastically improving efficiency in highly congested environments. Up to ~9.6 Gbps.
 * **802.11be (Wi-Fi 7):** 2.4GHz , 5 GHz and 6 GHz  **OFDMA** (Orthogonal Frequency-Division Multiple Access), drastically improving efficiency in highly congested environments. Up to ~46 Gbps.
 
+  ### . Mobile / Cellular Providers (4G LTE & 5G)
+* **4G LTE (Long-Term Evolution):** Merged the older, conflicting GSM and CDMA platforms into one universal standard. Standard LTE delivers up to 150 Mbps down, while LTE Advanced (LTE-A) pushes speeds to 300 Mbps.
+* **In-Bracket Definition:** `(The 4G cellular standard that combined older mobile technologies into one global system)`
+* **5G Technology:** Released in 2020 to provide high-speed mobile links. Targets peak metrics of 10 Gbps, with real-world ranges between 100 Mbps and 900 Mbps. 
+* **In-Bracket Definition:** `(The high-speed 5G cellular network designed to match wired broadband performance)`
+* **IoT Impact:** Broad broadband-like data speeds allow companies to scale out Internet of Things (IoT) deployments and rely heavily on cloud-hosted database processing.
+
+### . Satellite Networking (Non-Terrestrial Connectivity)
+* **Core Concept:** Connects isolated structures where standard ground cables or cellular towers do not exist. Standard service options provide roughly 100 Mbps download and 5 Mbps upload speeds.
+* **In-Bracket Definition:** `(Using a roof-mounted dish to send and receive internet data directly through an orbital satellite)`
+* **Latency Constraints:** Traditional high-orbit satellite communication creates a 500 ms round-trip delay. Newer low-Earth orbit (LEO) arrays cut this lag down to 40 ms.
+* **Rain Fade:** Satellite dishes require an open physical line of sight to the sky. Passing storm fronts can block or degrade the radio frequency signal, causing temporary dropouts known as rain fade.
+
 ## 2. Wireless Architectures & Identifiers
 * **IBSS (Independent Basic Service Set):** Also known as an *Ad Hoc* network. Two devices communicating directly with each other without a centralized access point (e.g., initially configuring IoT devices).
 * **Identifiers:**
