@@ -24,7 +24,7 @@
   * *Type:* External Gateway Protocol (EGP).
   * *Features:* The routing protocol of the global Internet. Used to connect entirely different Autonomous Systems together
   
-  * * **OSPF (Open Shortest Path First):**
+* **OSPF (Open Shortest Path First):**
 * *Use:* It builds a complete map of the network
   * *Type:* Interior Gateway Protocol (IGP) / Link-State.
   * *Features:* An open standard supported by almost all vendors.
