@@ -2,7 +2,7 @@
 *Exhaustive Video Mapping: Devices, Security, Storage, & Cabling*
 
 ## 1. Core Infrastructure & Wireless (Objective 1.2)
-* **Router (Layer 3):** Routes traffic between different IP subnets across the world.
+* **Router (Layer 3):** Routes traffic between different IP subnets across the world. To process routing at wire speed, they rely on dedicated hardware called ASICs (Application-Specific Integrated Circuits).
 * **Switch (Layer 2):** Forwards traffic in hardware using ASICs (Application-Specific Integrated Circuits) based on MAC addresses. Can provide Power over Ethernet (PoE).
 * **Layer 3 Switch:** A single device containing both Layer 2 switching and Layer 3 routing functionality.
 * **Access Point / AP (Layer 2):** Acts exclusively as a bridge translating between the 802.11 wireless network and the 802.3 wired Ethernet network.
