@@ -102,43 +102,6 @@ Created to solve the exhaustion of the IPv4 address space.
 * **Translation (NAT64 & DNS64):** * *DNS64:* Intercepts a DNS request from an IPv6 client and returns a synthetic IPv6 address that points to a translation router.
   * *NAT64:* The specialized router that receives the IPv6 traffic and actively translates it into an IPv4 packet so it can communicate with a legacy IPv4 server.
 
-## 9. Routing Tables & Static Routing (Objective 2.1 - Transcript Verified)
-* **The Routing Table:** The internal database a router uses to determine the "Next Hop" for a packet. If a router receives a packet destined for an IP address that is not in its routing table, the router will **discard** the packet.
-* **Static Routing:** The manual configuration of network routes by a network administrator.
-  * *Advantages:* Zero CPU/Memory overhead, highly secure (no routing broadcasts), and very fast to implement on small networks.
-  * *Ideal Use Case:* **Stub Networks** (remote locations with only a single uplink/exit point to the internet).
-  * *Disadvantages:* Does not scale to large enterprise networks, highly prone to human error (e.g., routing loops), and completely lacks fault tolerance (will not automatically reroute traffic if a link fails).
-
-## 10. Dynamic Routing Protocols (Objective 2.1 - Transcript Verified)
-Dynamic routing allows routers to automatically discover network paths and automatically failover if a link drops. Requires CPU and memory overhead to maintain.
-
-* **Autonomous System (AS):** A routed network under the control of a single administrative entity.
-* **OSPF (Open Shortest Path First):**
-  * *Type:* Interior Gateway Protocol (IGP) / Link-State.
-  * *Features:* An open standard supported by almost all vendors.
-  * *Metric:* Uses **Cost** (based on link bandwidth/speed) to determine the best path.
-* **EIGRP (Enhanced Interior Gateway Routing Protocol):**
-  * *Type:* Interior Gateway Protocol (IGP).
-  * *Features:* Highly Cisco-centric. Offers very fast convergence and efficient routing updates.
-* **BGP (Border Gateway Protocol):**
-  * *Type:* External Gateway Protocol (EGP).
-  * *Features:* The routing protocol of the global Internet. Used to connect entirely different Autonomous Systems together.
-
-## 11. Route Selection & Tie-Breakers (Objective 2.1 - Transcript Verified)
-When a router has multiple paths to the same destination, it evaluates them in this strict order:
-* **1. Prefix Length:** The router always selects the most specific route. A `/32` is preferred over a `/24`.
-* **2. Administrative Distance (AD):** If prefix lengths are identical, the router trusts the protocol with the lowest AD.
-  * Directly Connected = 0
-  * Static Route = 1
-  * EIGRP = 90
-  * OSPF = 110
-  * RIP = 120
-* **3. Routing Metric:** If routes are learned from the exact same protocol, the internal metric is used (e.g., lowest OSPF Cost). Metrics cannot be compared across different routing protocols.
-
-## 12. Advanced Routing Operations (Objective 2.1 - Transcript Verified)
-* **First Hop Redundancy Protocol (FHRP):** Provides default gateway redundancy by assigning a Virtual IP (VIP) to multiple physical routers. If the active router fails, the standby router seamlessly assumes the VIP.
-* **Subinterfaces:** Dividing a single physical router interface into multiple virtual interfaces. Typically used to route traffic for multiple VLANs across a single 802.1Q trunk connection (often called "Router on a Stick").
-
 ## 13. Network Address Translation (NAT) (Objective 2.1 - Transcript Verified)
 A technology designed to conserve the limited supply of public IPv4 addresses and allow private networks to access the internet.
 * **How it works:** A router intercepts outbound traffic, removes the non-routable private Source IP (RFC 1918), and replaces it with a valid Public IP. It maintains a stateful "NAT Table" to reverse the translation when the return traffic arrives.
