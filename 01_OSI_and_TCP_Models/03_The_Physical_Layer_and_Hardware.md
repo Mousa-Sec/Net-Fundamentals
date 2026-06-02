@@ -23,7 +23,7 @@
 
 ## 3. Network Storage (Objective 1.2)
 * **NAS (Network Attached Storage):** Provides **File-level access**. When modifying a document, the entire file must be pulled across the network to memory, changed, and written entirely back.
-* **SAN (Storage Area Network):** Provides **Block-level access**. Functions like a local hard drive. If you change one paragraph in a massive file, it only rewrites those specific modified blocks. Highly efficient, often placed on isolated high-bandwidth networks.
+* **SAN (Storage Area Network):** Provides **Block-level access**. Functions like a local hard drive. If you change one paragraph in a massive file, it only rewrites those specific modified blocks. Highly efficient, often placed on isolated high-bandwidth networks, enterprise databases and Virtual Machines.
 
 ## 4. Cabling & Connectors (Objective 1.5)
 * **Copper Categories:** Cat 5e (1 Gbps / 100m), Cat 6 (10 Gbps / 55m), Cat 6a (10 Gbps / 100m).
