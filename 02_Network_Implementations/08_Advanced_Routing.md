@@ -1,6 +1,6 @@
 # Day 8: Advanced Routing Implementations (N10-009)
-*Fact-Checked against Professor Messer N10-009 Objective 2.1 (Complete)*
 
+* **The Routing Table:** The internal database a router uses to determine the "Next Hop" for a packet. If a router receives a packet destined for an IP address that is not in its routing table, the router will **discard** the packet.
 ## 1. Static vs. Dynamic Routing
 ### Static Routing
 * **Manual Entry:** The administrator manually enters every route into every router. 
@@ -14,11 +14,20 @@
 
 ## 2. Dynamic Protocol Classifications
 * **IGP (Interior Gateway Protocol):** Used *inside* an organization.
-  * **EIGRP:** Cisco-proprietary hybrid. Very efficient, low overhead, and fast convergence.
-  * **OSPF:** Non-proprietary **Link-State** protocol. It builds a complete map of the network and uses **Cost** as its metric (based on bandwidth).
-* **EGP (Exterior Gateway Protocol):** Used *between* organizations (The Internet). 
-  * **BGP (Border Gateway Protocol):** Known as the "three napkins protocol". It is the protocol that runs the global internet.
-
+* **EGP (Exterior Gateway Protocol):** Used *between* organizations (The Internet).
+  
+  * **EIGRP (Enhanced Interior Gateway Routing Protocol):**
+  * *Type:* Interior Gateway Protocol (IGP).
+  * *Features:* Highly Cisco-centric. Offers very fast convergence and efficient routing updates.
+* **BGP (Border Gateway Protocol or three napkins protocol):**
+  * *Type:* External Gateway Protocol (EGP).
+  * *Features:* The routing protocol of the global Internet. Used to connect entirely different Autonomous Systems together
+  * **OSPF (Open Shortest Path First):**
+* *Use:* It builds a complete map of the network
+  * *Type:* Interior Gateway Protocol (IGP) / Link-State.
+  * *Features:* An open standard supported by almost all vendors.
+  * *Metric:* Uses **Cost** (based on link bandwidth/speed) to determine the best path.
+    
 ## 3. The Routing Table Decision Process
 When a router evaluates where to send a packet, it follows this strict hierarchy to break ties:
 
@@ -30,6 +39,8 @@ When a router evaluates where to send a packet, it follows this strict hierarchy
    * OSPF: 110
    * RIP: 120
 3. **Metrics:** Used only to break a tie between two routes learned from the *same* protocol (e.g., the lowest OSPF Cost).
+
+* **Autonomous System (AS):** A routed network under the control of a single administrative entity.
 
 ## 4. Redundancy & Virtualization
 * **FHRP (First Hop Redundancy Protocol):** Allows multiple physical routers to share a single **Virtual IP (VIP)**. If the primary fails, the standby takes over the VIP so clients never lose their default gateway.
