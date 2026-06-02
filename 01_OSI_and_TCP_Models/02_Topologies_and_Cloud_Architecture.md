@@ -47,8 +47,8 @@ Modern networks separate the decision-making from the actual data forwarding.
 
 ## 8. Cloud Gateways & Firewalls Objective 1.3
 * **Multitenancy:** Multiple customers sharing one software instance securely.
-* **In-Bracket Definition:** `(A flexible computing model where multiple users share physical hardware and scale resources dynamically)`
-  * **Elasticity:** The ability to scale system resources up/out during traffic spikes and scale them down/in dynamically when demand decreases to manage expenses.
+  * **In-Bracket Definition:** `(A flexible computing model where multiple users share physical hardware and scale resources dynamically)`
+* **Elasticity:** The ability to scale system resources up/out during traffic spikes and scale them down/in dynamically when demand decreases to manage expenses.
  * **NSG (Network Security Group):** A firewall applied to a specific Virtual NIC (highly granular) for strict device-level isolation.
    **In-Bracket Definition:** `(A precise firewall policy applied directly to individual virtual network cards)`
     **Operational Benefit:** Grants high administrative granularity across the exact same subnet, but increases overall management overhead.
