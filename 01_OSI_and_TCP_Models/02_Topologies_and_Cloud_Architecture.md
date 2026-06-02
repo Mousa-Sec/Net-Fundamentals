@@ -84,3 +84,30 @@ A wide area network built to manage the complexities of decentralized cloud envi
 * **Transport Agnostic:** Can route traffic securely over any connection type simultaneously (Fiber, DSL, 5G/LTE).
 * **Central Policy Management:** Administrators configure rules on a single "pane of glass" controller, which instantly pushes the updates to all SD-WAN routers globally.
 * **Zero-Touch Provisioning:** Remote devices automatically configure and update themselves upon being plugged in, requiring no local IT intervention.
+
+# CompTIA Network+ N10-009 — Objective 1.8: Virtual Extensible LAN (VXLAN)
+
+### The Problem: Data Center Interconnection (DCI)
+* **Definition:** Linking separate data centers together so applications can scale, run, or migrate globally without being limited by local IP layouts or physical media.
+* **The Challenge:** Different data centers use conflicting IP configurations and transport media (fiber, copper, Metro Ethernet), making seamless application transitions difficult.
+
+### Understanding VXLAN
+* **Definition:** An advanced encapsulation standard that runs virtual Layer 2 overlay networks across a physical Layer 3 routable network.
+* **In-Bracket Definition:** `(A method that stretches a Layer 2 network over a routable Layer 3 network by hiding Ethernet frames inside IP packets)`
+* **VLAN vs. VXLAN Scaling Limits:**
+  * **VLANs:** Layer 2 bounded, non-routable, 12-bit ID tag with a maximum cap of ~4,000 virtual networks.
+  * **VXLANs:** Layer 3 routable, 24-bit ID tag allowing up to 16 million virtual networks; tailored for large multi-tenant cloud data centers.
+
+### VXLAN Architecture & Components
+* **VXLAN Tunnel Endpoint (VTEP):** The physical switch or virtual host function that manages tunnel creation, packet encapsulation, and decapsulation.
+  * **In-Bracket Definition:** `(The device on either end of the tunnel that packages and unpackages the data)`
+  * **Addressing:** Each VTEP holds a distinct, routable Layer 3 IP address to cross the core infrastructure network.
+* **VXLAN Network Identifier (VNI):** The specific 24-bit tag assigned to a discrete virtual network domain to isolate tenant traffic.
+  * **In-Bracket Definition:** `(The unique ID code used to separate different virtual networks inside the tunnel)`
+
+### The Encapsulation Process
+* **Data Flow:**
+  1. The host VM builds a standard Ethernet frame (Ethernet Header + IP Header + Payload).
+  2. The source VTEP wraps the frame inside a **VXLAN Header** (containing the VNI tag), nests it into a **UDP Packet**, and applies an **Outer IP Header** addressed directly to the destination VTEP.
+  3. The packet routes over standard Layer 3 routers.
+  4. The receiving VTEP strips away the outer wrapper and drops the clean, original Layer 2 frame straight into the destination host system.
