@@ -16,7 +16,30 @@ Modern networks separate the decision-making from the actual data forwarding.
 * **Data Plane:** The "muscle." The physical switches and routers executing the controller's instructions.Contains the routing tables, MAC address tables, and NAT tables that dictate *where* the Data Plane should send traffic.
 * * **Management Plane (Application Layer):** The administrative interface used to configure the device (e.g., SSH, Console connection, Web GUI).
 
-**Infrastructure as Code (IaC):** Replacing manual hardware configuration with code (e.g., Python, Terraform). This allows an entire network infrastructure to be deployed, modified, or destroyed via a single automated script.
+# CompTIA Network+ N10-009 — Objective 1.8: Infrastructure as Code (IaC)
+
+### Introduction to Infrastructure as Code (IaC)
+* **Definition:** A practice where entire systems, application packages, and core networking architectures (routers, switches, firewalls) are described and configured inside readable text file scripts.
+* **In-Bracket Definition:** `(Managing and provisioning an entire corporate network and server setup using code and text files rather than doing it by hand)`
+* **Operational Benefit:** Replaces manual individual hardware installations. To spin up matching duplicate instances in a distant data center, you run the exact same script to stand up a mirror infrastructure.
+
+### Playbooks and Automation
+* **Definition:** A strict, pre-arranged sequence of automated steps implemented to resolve security alerts or maintain systems.
+* **In-Bracket Definition:** `(A step-by-step automated script or workflow that automatically fixes or manages a system problem when triggered)`
+* **Incident Handling Example:** Playbooks allow automated responses to malware alerts. The script can drop the infected endpoint, purge the disks, apply a secure base operating system image, and re-launch the system automatically.
+* **SOAR Platforms:** Playbooks are centralized and deployed within a Security Orchestration, Automation, and Response (SOAR) management console for unified tracking.
+
+### Benefits of Infrastructure as Code
+* **Configuration Drift Prevention:** Overwrites minor unauthorized updates or modifications, pulling systems back to a uniform, standard compliance baseline.
+* **Environment Synchronization:** Ensures testing environments exactly replicate live production layouts to eliminate configuration errors during application rollouts.
+* **Automated Upgrades:** Editing lines inside an IaC master file enables systems to dynamically target and apply software adjustments or interface overrides.
+* **Live System Documentation:** The script text describes active compute properties, acting as an accurate, up-to-date document of your infrastructure state.
+
+### Source Control and Versioning System (Git)
+* **Definition:** Utilizing a Central Repository system (such as Git) to manage changes, audit history, and track edits made to IaC files across massive multi-user teams.
+* **In-Bracket Definition:** `(A central system like Git that tracks software changes and allows multiple administrators to work on the same file without breaking it)`
+* **Branching & Merging:** Engineers split copies of production templates into "branches" to test upgrades safely. Once verified, branches are integrated back into the master config through a "merge" operation.
+* **Conflict Management:** Identifies instances where multiple engineers try to submit different revisions to the same line of code, stopping deployment until an administrator resolves the structural conflict.
 
 ## The Attack Surface
 * **Targeting the Control Plane:** If the central SDN controller is compromised, the attacker dictates traffic flow for the entire network.
