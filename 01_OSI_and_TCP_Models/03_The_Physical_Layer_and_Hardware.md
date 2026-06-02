@@ -35,6 +35,33 @@ Proxy servers operate at the Application Layer (Layer 7), allowing them to analy
 * **NAS (Network Attached Storage):** Provides **File-level access**. When modifying a document, the entire file must be pulled across the network to memory, changed, and written entirely back.
 * **SAN (Storage Area Network):** Provides **Block-level access**. Functions like a local hard drive. If you change one paragraph in a massive file, it only rewrites those specific modified blocks. Highly efficient, often placed on isolated high-bandwidth networks, enterprise databases and Virtual Machines.
 
+# CompTIA Network+ N10-009 — Objective 1.2: Networking Functions
+
+### Content Delivery Network (CDN)
+* **Purpose:** Distributes data efficiently by caching files across a geographically distributed group of servers to speed up access for global end-users.
+* **In-Bracket Definition:** `(Geographically distributed servers that cache content locally to speed up web loading times)`
+* **Key Operations:** Instead of drawing all global traffic to a single central source server, traffic hits regional edge CDN nodes. This cuts down latency and optimizes bandwidth for rich media streams.
+
+### Virtual Private Network (VPN) Concentrator
+* **Purpose:** Acts as a specialized central connection hub that securely terminates encryption and decryption processing for thousands of simultaneous remote user connections.
+* **In-Bracket Definition:** `(A dedicated hardware device or software that manages and encrypts thousands of remote user VPN tunnels)`
+* **Key Operations:** Safely transports unencrypted payloads over insecure networks like the public internet. It utilizes specialized, high-throughput cryptographic hardware appliances (often built into Next-Gen Firewalls), though it can run via software for smaller scales.
+
+### Quality of Service (QoS) & Traffic Shaping
+* **Purpose:** Prioritizes specific business-critical network applications over general background traffic to optimize bandwidth and data delivery performance.
+* **In-Bracket Definition:** `(Prioritizing important data like voice or video over less critical traffic to prevent lag)`
+* **Key Operations:** Restructures bandwidth based on application profiles. Real-time media (voice/video) gets high priority, while delay-tolerant tasks (file copies) are throttled via adjustments on routers, firewalls, and switches.
+
+### Time to Live (TTL) in IP Packets
+* **Purpose:** A built-in protocol mechanism used to restrict how long a piece of data can exist on a network, preventing undeliverable packets from looping forever.
+* **In-Bracket Definition:** `(A counter in an IP packet that drops by 1 at each router to stop infinite looping)`
+* **Key Operations:** Resolves the threat of routing loops (where routers bounce packets infinitely). Every passing router hop drops the IPv4 header's TTL number by 1. Once it hits 0, the packet is immediately dropped. Linux/MacOS defaults to 64 hops; Windows defaults to 128 hops.
+
+### Time to Live (TTL) in Domain Name System (DNS)
+* **Purpose:** Specifies the exact duration that a local client operating system or intermediary resolver should save a resolved DNS record inside its memory.
+* **In-Bracket Definition:** `(The number of seconds a computer keeps a DNS address record in its cache before asking the server again)`
+* **Key Operations:** Measures data lifespans in seconds rather than hops. A TTL value of 300 instructs the local OS cache to preserve the domain mapping for exactly 300 seconds (5 minutes) before purging it and forcing a new look-up query.
+
 ## 4. Cabling & Connectors (Objective 1.5)
 * **Copper Categories:** Cat 5e (1 Gbps / 100m), Cat 6 (10 Gbps / 55m), Cat 6a (10 Gbps / 100m).
 * **Copper Connectors:** RJ45 (Network), RJ11 (Telephone).
