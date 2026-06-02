@@ -11,9 +11,6 @@ Understanding the physical and logical hardware used to connect, secure, and man
   * *IDS (Intrusion Detection System):* Monitors and alerts administrators to known inbound attacks (out-of-band).
   * *IPS (Intrusion Prevention System):* Actively blocks detected attacks in real-time (in-line). Today, these features are typically integrated directly into NGFWs (Unified Threat Management).
 * **Load Balancers:** Distribute incoming network traffic across multiple servers to ensure high availability and reliability. They also optimize traffic via "TCP offloading," handling encryption/decryption overhead to free up backend server resources.
-* **Proxy Servers:** Act as intermediaries for client requests, often caching web pages and filtering malicious content.
-  * *Explicit Proxies:* Require manual OS or browser configuration.
-  * *Transparent Proxies:* Operate invisibly without endpoint configuration.
     
 ## 2. Critical Protocols and Tunneling (1.4)
 Protocols used for network diagnostics, management, and secure tunneling.
@@ -92,18 +89,7 @@ Grouping protocols by how they transmit data makes memorizing the port numbers m
 
 ---
 
-## 6. Web Filtering: Proxies vs. SWGs
-Proxy servers operate at the Application Layer (Layer 7), allowing them to analyze full URLs rather than just IP addresses. 
-
-* **How Proxies Filter Traffic:**
-  * **URL Filtering:** Compares destination URLs against databases of categorized websites (e.g., blocking gambling or known malware hosts).
-  * **Deep Content Inspection:** Opens data packets to scan for malicious code or phishing links before they reach the user.
-  * **SSL/TLS Inspection:** Decrypts HTTPS traffic to scan content that would otherwise remain hidden.
-
-* **Proxy vs. Secure Web Gateway (SWG)**
-  While traditional proxies focus on privacy and basic site blocking, a **Secure Web Gateway (SWG)** is a dedicated security solution. SWGs provide comprehensive threat prevention, advanced malware scanning, sandboxing, and Data Loss Prevention (DLP).
-
-## 7. Wireless Expansion: WAPs vs. Extenders
+## 6. Wireless Expansion: WAPs vs. Extenders
 Expanding a wireless network requires understanding the "backhaul"—how the device communicates back to the main network.
 
 | Feature | Wireless Access Point (WAP) | Wi-Fi Extender (Repeater) |
@@ -113,7 +99,7 @@ Expanding a wireless network requires understanding the "backhaul"—how the dev
 | **Network Name (SSID)** | Seamless roaming (uses the same SSID) | Usually creates a new network (e.g., "Home_WiFi_EXT") |
 | **Best For** | Enterprise, gaming, permanent setups | Quick fixes, small areas without Ethernet access |
 
-## 8. Enterprise Wireless Infrastructure
+## 7. Enterprise Wireless Infrastructure
 In a professional environment, Access Points are rarely plugged directly into a router. Instead, they rely on Switches and Controllers.
 
 ### The Switch (The Muscle & Power)
@@ -130,7 +116,7 @@ Logging into 50 individual APs to change a Wi-Fi password is not scalable. A Wir
 * **Security:** Detects unauthorized "rogue" APs plugged into the network and monitors for interference.
 * **Evolution of the WLC:** Controllers used to be physical hardware appliances in a server rack. Today, they are often **Cloud-Managed** (e.g., Cisco Meraki) or **Embedded**, where one physical AP acts as the master controller for the rest.
 
-* ## 16. The IPsec Protocol Suite (Internal Mechanics)
+* ## The IPsec Protocol Suite (Internal Mechanics)
 To secure a VPN, IPsec relies on three specific sub-protocols:
 * **AH (Authentication Header):** Provides **Integrity** and **Authentication**. It does NOT encrypt data.
 * **ESP (Encapsulating Security Payload):** Provides **Confidentiality (Encryption)**. This is the part that hides the data.
