@@ -50,10 +50,10 @@ Modern networks separate the decision-making from the actual data forwarding.
   * **In-Bracket Definition:** `(A flexible computing model where multiple users share physical hardware and scale resources dynamically)`
 * **Elasticity:** The ability to scale system resources up/out during traffic spikes and scale them down/in dynamically when demand decreases to manage expenses.
  * **NSG (Network Security Group):** A firewall applied to a specific Virtual NIC (highly granular) for strict device-level isolation.
-   **In-Bracket Definition:** `(A precise firewall policy applied directly to individual virtual network cards)`
+   * **In-Bracket Definition:** `(A precise firewall policy applied directly to individual virtual network cards)`
     **Operational Benefit:** Grants high administrative granularity across the exact same subnet, but increases overall management overhead.
 * **NSL / NACL (Network Security List):** A firewall applied to an entire Subnet (less granular).
-* **In-Bracket Definition:** `(A firewall list that applies security rules broadly across entire cloud subnets)`
+  * **In-Bracket Definition:** `(A firewall list that applies security rules broadly across entire cloud subnets)`
   **Filtering Criteria:** Rules intercept TCP/UDP ports (e.g., 443, 22) and target source/destination IP variables using standard CIDR block notation.
 * **Internet Gateway (IGW):** A two-way connection. Allows cloud instances in a public subnet to be accessed from anywhere on the public internet (e.g., a public-facing web server). Allows 2-way internet traffic for cloud instances.
 * **Network Security Group (NSG):** A highly granular cloud firewall. Rules are applied directly to a specific **Virtual NIC (Network Interface Card)** attached to a single virtual machine.
