@@ -1,16 +1,4 @@
 # CompTIA Network+ N10-009: Infrastructure, Protocols, and Ports
-
-## 1. Networking Devices (1.2)
-Understanding the physical and logical hardware used to connect, secure, and manage data across modern networks.
-
-* **Routers:** Operate at Layer 3 (Network) of the OSI model. They connect different IP subnets and make forwarding decisions based on IP addresses. To process routing at wire speed, they rely on dedicated hardware called ASICs (Application-Specific Integrated Circuits).
-* **Firewalls:**
-  * *Traditional:* Filter traffic based on TCP or UDP port numbers and IP addresses.
-  * *Next-Generation Firewalls (NGFW):* Perform deep packet inspection at Layer 7 (Application). They identify and block specific applications using signatures, rather than just relying on port numbers.
-* **IDS and IPS:**
-  * *IDS (Intrusion Detection System):* Monitors and alerts administrators to known inbound attacks (out-of-band).
-  * *IPS (Intrusion Prevention System):* Actively blocks detected attacks in real-time (in-line). Today, these features are typically integrated directly into NGFWs (Unified Threat Management).
-* **Load Balancers:** Distribute incoming network traffic across multiple servers to ensure high availability and reliability. They also optimize traffic via "TCP offloading," handling encryption/decryption overhead to free up backend server resources.
     
 ## 2. Critical Protocols and Tunneling (1.4)
 Protocols used for network diagnostics, management, and secure tunneling.
