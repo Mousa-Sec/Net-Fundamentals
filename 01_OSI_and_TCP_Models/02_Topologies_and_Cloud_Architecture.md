@@ -57,7 +57,7 @@ Modern networks separate the decision-making from the actual data forwarding.
   **Filtering Criteria:** Rules intercept TCP/UDP ports (e.g., 443, 22) and target source/destination IP variables using standard CIDR block notation.
 * **Internet Gateway (IGW):** A two-way connection. Allows cloud instances in a public subnet to be accessed from anywhere on the public internet (e.g., a public-facing web server). Allows 2-way internet traffic for cloud instances.
 * **Network Security Group (NSG):** A highly granular cloud firewall. Rules are applied directly to a specific **Virtual NIC (Network Interface Card)** attached to a single virtual machine.
-* **NAT Gateway:** Translates private internal IPs to public IPs. Allows internal servers to reach out to the internet (for software updates), but explicitly restricts and drops unsolicited inbound connections from the outside. In short, allows outbound internet access but restricts unsolicited inbound traffic.
+* **VPC NAT Gateway:** Translates private internal IPs to public IPs. Allows internal servers to reach out to the internet (for software updates), but explicitly restricts and drops unsolicited inbound connections from the outside. In short, allows outbound internet access but restricts unsolicited inbound traffic.
 * **Direct Connect:** A dedicated, private physical connection to a cloud provider (bypasses the public internet).
 
 ### Network Function Virtualization (NFV)
