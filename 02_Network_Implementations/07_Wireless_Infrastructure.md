@@ -7,7 +7,8 @@
 * **802.11g:** 2.4 GHz frequency. Up to 54 Mbps. (Backwards compatible with 802.11b).
 * **802.11n (Wi-Fi 4):** 2.4 GHz and 5 GHz. Introduced **MIMO** (Multiple-Input Multiple-Output) using multiple antennas. Up to 600 Mbps.
 * **802.11ac (Wi-Fi 5):** 5 GHz exclusively. Introduced **MU-MIMO** (Multi-User MIMO), allowing the access point to transmit to multiple clients simultaneously. Up to ~7 Gbps.
-* **802.11ax (Wi-Fi 6):** 2.4 GHz and 5 GHz. Introduced **OFDMA** (Orthogonal Frequency-Division Multiple Access), drastically improving efficiency in highly congested environments. Up to ~9.6 Gbps.
+* **802.11ax (Wi-Fi 6):** 2.4 GHz, 5 GHz (Wi-Fi 6e has 6GHz). Introduced **OFDMA** (Orthogonal Frequency-Division Multiple Access), drastically improving efficiency in highly congested environments. Up to ~9.6 Gbps.
+* **802.11be (Wi-Fi 7):** 2.4GHz , 5 GHz and 6 GHz  **OFDMA** (Orthogonal Frequency-Division Multiple Access), drastically improving efficiency in highly congested environments. Up to ~46 Gbps.
 
 ## 2. Wireless Architectures & Identifiers
 * **IBSS (Independent Basic Service Set):** Also known as an *Ad Hoc* network. Two devices communicating directly with each other without a centralized access point (e.g., initially configuring IoT devices).
