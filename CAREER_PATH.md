@@ -13,7 +13,6 @@
 - [ ] **AI-900:** 5 Days.
 
 ## 🌍 Phase 4: Professional Internship & Advanced Certs (Summer 2027)
-- [ ] **Green Circle Internship:** 3 Months.
 - [ ] **eJPT (Pen-Testing):** ~45 Days of labbing.
 - [ ] **AI-102 (AI Security):** ~30 Days.
 
