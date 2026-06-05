@@ -43,6 +43,45 @@
   * **In-Bracket Definition:** `(A security protocol that packs cleartext DNS queries inside an encrypted TLS tunnel over a custom network port to prevent snooping)`
 * **DoH (DNS over HTTPS):** Encrypts lookups by hiding them inside standard HTTPS web packets over **TCP Port 443**, blending DNS lookups into regular web traffic.
   * **In-Bracket Definition:** `(A privacy protocol that hides encrypted DNS lookups inside standard web traffic so they cannot be blocked or monitored)`
+ 
+# CompTIA Network+ N10-009 — Objective 3.4: DNS Records
+
+### 1. Introduction to Resource Records
+* **Resource Records:** The specific configuration entries within a DNS zone file that define data properties, manage addressing mappings, and authorize external application traffic.
+
+### 2. Start of Authority (SOA) Record
+* **Definition:** The foundational record entry heading a DNS zone profile.
+* **In-Bracket Definition:** `(A master configuration record that provides structural overview information about a DNS zone, including the administrative domain and sync timers)`
+* **Parameters:** Controls zone serial numbers (incrementing for secondary sync tracking), retry windows, and master file lifespans.
+
+### 3. Address Forwarding Records (A vs. AAAA)
+* **A Records:** Maps an alphanumeric host name directly to an **IPv4** address.
+* **AAAA Records (Quad-A):** Maps an alphanumeric host name directly to a 128-bit **IPv6** hex address.
+
+### 4. Canonical Name (CNAME) Records
+* **Definition:** Tracks aliases for a domain, redirecting alternate lookup names back to a single, true host string.
+* **In-Bracket Definition:** `(An alias record that redirects multiple different host names to a single true, canonical domain name)`
+* **Transaction Loop:** Querying an alias returns the true domain name. The client must then issue a second recursive query to find the actual A/AAAA record of that target to resolve the path.
+
+### 5. Mail Exchanger (MX) Records
+* **Definition:** Identifies the designated mail servers authorized to handle inbound mail routing for the organization.
+* **In-Bracket Definition:** `(A dedicated routing record that tells external email servers which specific mail servers accept messages for your domain)`
+
+### 6. Text (TXT) Records
+* **Definition:** Multi-functional, string-based fields utilized primarily to hold public text keys and implement security controls.
+* **In-Bracket Definition:** `(A generic text slot inside DNS used to store security records, verification strings, and public cryptographic keys)`
+* **Security Controls:**
+  * **SPF:** Restricts email spoofing by listing the specific server IPs authorized to send mail on behalf of the domain.
+  * **DKIM:** Protects message authenticity by storing the public cryptographic key needed to verify digital signatures on outbound emails.
+
+### 7. Name Server (NS) Records
+* **Definition:** Declares the authoritative name servers that hold the official zone data files for the domain.
+* **In-Bracket Definition:** `(A record that identifies the official name servers that hold the true master files and settings for a domain)`
+
+### 8. Pointer (PTR) Records
+* **Definition:** Used during reverse DNS lookups to map an IP address back to its FQDN host string.
+* **In-Bracket Definition:** `(A reverse-lookup record that takes a numeric IP address and resolves it back to its matching text domain name)`
+* **Format:** Records target IPs in reverse notation order inside the internal file structure to cleanly process address-to-name translations.
 
 
 
