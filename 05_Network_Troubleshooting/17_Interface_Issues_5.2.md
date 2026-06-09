@@ -11,7 +11,7 @@ Administrators utilize automated monitoring to maintain real-time visibility acr
 * **Management Information Base (MIB-2):** A highly standardized, vendor-agnostic statistical catalog deployed across networking hardware to track core interface state variables.
 * **Proprietary MIBs:** Customized vendor databases integrated alongside standard configurations to track unique hardware-level mechanics or deep telemetry metrics specific to complex systems (such as high-end firewalls or enterprise core switches).
 
-### 2. Core Interface Telemetry Metrics
+### 2. Interface Monitoring
 Monitoring engines evaluate three foundational parameters to judge the operational health and capacity of an individual network connection.
 * **Link Status:** Captures the current link layer state of the physical path, tracking whether the line is fundamentally up/up or down/down. Outages indicate a bad physical cable, a dead transceiver interface, or an ongoing device reload event.
 * **Utilization:** Measures cumulative data throughput moving across an interface path relative to its maximum provisioned channel capacity. High baseline saturation triggers alerts for design modifications, link aggregation, or network redesign to handle saturation.
