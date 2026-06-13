@@ -26,6 +26,9 @@ Modern networks separate the decision-making from the actual data forwarding.
 ### Infrastructure as Code (IaC) Template
 An IaC template is a human-readable, static text file—written in a highly structured configuration language like YAML, JSON, or HCL—that serves as the complete and authoritative blueprint for an entire IT environment. It explicitly defines the desired state of all configuration settings, hardware specifications, network designs, storage layouts, and security policies.
 
+### Static File
+A static file is a permanent, unchanging text file saved on a storage drive or version control repository (like GitHub) that contains data but cannot execute code or process information on its own. It acts purely as a fixed document of instructions or raw text.
+
 ### Playbooks and Automation
 * **Definition:** A strict, pre-arranged sequence of automated steps implemented to resolve security alerts or maintain systems.
 * **In-Bracket Definition:** `(A step-by-step automated script or workflow that automatically fixes or manages a system problem when triggered)`
