@@ -29,6 +29,8 @@
   * *Type:* Interior Gateway Protocol (IGP) / Link-State.
   * *Features:* An open standard supported by almost all vendors.
   * *Metric:* Uses **Cost** (based on link bandwidth/speed) to determine the best path.
+ 
+* **RIP Metric:** Uses **Hop Count** (the raw number of routers a packet must cross). A metric of `1` means the destination is one hop away.
     
 ## 3. The Routing Table Decision Process
 When a router evaluates where to send a packet, it follows this strict hierarchy to break ties:
