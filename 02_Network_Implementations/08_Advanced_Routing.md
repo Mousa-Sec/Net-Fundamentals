@@ -23,11 +23,11 @@ The Protocols (Classified by how they calculate paths):
 
 ### Distance-Vector (Hop Count):
 
-* RIP (Routing Information Protocol): Calculates the best path purely by counting how many routers (hops) are in the way. Max hop count is 15. Uses **Hop Count**
+* RIP (Routing Information Protocol): Calculates the best path purely by counting how many routers (hops) are in the way. Max hop count is 15. Uses **Hop Count** metric
 
 ### Link-State (Bandwidth/Speed):
 
-* OSPF (Open Shortest Path First): Builds a complete map of the local network topology and calculates the fastest path based on cable speed (bandwidth). Very fast and scales well internally.
+* OSPF (Open Shortest Path First): Builds a complete map of the local network topology and calculates the fastest path based on cable speed (bandwidth). Very fast and scales well internally. Uses the **Cost** metric
 
 * IS-IS (Intermediate System to Intermediate System): Functions similarly to OSPF; used heavily within large service-provider internal backbones.
 
@@ -44,6 +44,7 @@ Definition: Routing protocols used to route data between different, independent 
 * Note on Terminology: "EGP" was an old, specific protocol used at the dawn of the internet. It was completely replaced by BGP. Today, EGP is the category name, and BGP is the actual protocol used to fulfill it.
 
 * How BGP Works (Path-Vector): BGP does not care about cable speed or hop count inside a company. It looks at the internet as a collection of massive corporate entities (Autonomous Systems). It routes traffic based on network path policies, business agreements, and security rules between ISPs.
+* Metric: Path Attributes
  
 ## 3. The Routing Table Decision Process
 When a router evaluates where to send a packet, it follows this strict hierarchy to break ties:
