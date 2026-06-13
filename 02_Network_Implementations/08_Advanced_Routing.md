@@ -14,29 +14,29 @@
 
 ## 2. Dynamic Protocol Classifications
 
-### Interior Gateway Protocols (IGP)
+# Interior Gateway Protocols (IGP)
 * Definition: Routing protocols used to exchange routing information inside a single Autonomous System (your internal corporate office or campus network).
 
 * Goal: To find the fastest path between local internal subnets and routers.
 
 The Protocols (Classified by how they calculate paths):
 
-# Distance-Vector (Hop Count):
+### Distance-Vector (Hop Count):
 
 * RIP (Routing Information Protocol): Calculates the best path purely by counting how many routers (hops) are in the way. Max hop count is 15. Uses **Hop Count**
 
-# Link-State (Bandwidth/Speed):
+### Link-State (Bandwidth/Speed):
 
 * OSPF (Open Shortest Path First): Builds a complete map of the local network topology and calculates the fastest path based on cable speed (bandwidth). Very fast and scales well internally.
 
 * IS-IS (Intermediate System to Intermediate System): Functions similarly to OSPF; used heavily within large service-provider internal backbones.
 
-# Advanced Distance-Vector (Hybrid):
+### Advanced Distance-Vector (Hybrid):
 
 * EIGRP (Enhanced Interior Gateway Routing Protocol): A Cisco-engineered protocol that looks at both bandwidth and line delay to find the best internal path.
 * The Metric: Composite Metric (primarily Bandwidth and Delay).
 
-## Exterior Gateway Protocols (EGP) / BGP
+# Exterior Gateway Protocols (EGP) / BGP
 Definition: Routing protocols used to route data between different, independent Autonomous Systems. This is the routing infrastructure that runs the global Internet.
 
 * The Only Protocol Used: BGP (Border Gateway Protocol).
