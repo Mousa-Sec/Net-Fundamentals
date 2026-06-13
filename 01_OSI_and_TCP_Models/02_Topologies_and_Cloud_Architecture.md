@@ -23,6 +23,9 @@ Modern networks separate the decision-making from the actual data forwarding.
 * **In-Bracket Definition:** `(Managing and provisioning an entire corporate network and server setup using code and text files rather than doing it by hand)`
 * **Operational Benefit:** Replaces manual individual hardware installations. To spin up matching duplicate instances in a distant data center, you run the exact same script to stand up a mirror infrastructure.
 
+### Infrastructure as Code (IaC) Template
+An IaC template is a human-readable, static text file—written in a highly structured configuration language like YAML, JSON, or HCL—that serves as the complete and authoritative blueprint for an entire IT environment. It explicitly defines the desired state of all configuration settings, hardware specifications, network designs, storage layouts, and security policies.
+
 ### Playbooks and Automation
 * **Definition:** A strict, pre-arranged sequence of automated steps implemented to resolve security alerts or maintain systems.
 * **In-Bracket Definition:** `(A step-by-step automated script or workflow that automatically fixes or manages a system problem when triggered)`
